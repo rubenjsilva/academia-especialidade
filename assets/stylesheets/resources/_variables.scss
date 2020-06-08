@@ -1,0 +1,67 @@
+/*
+--------------------------------------------------------------------------------
+FONTS
+--------------------------------------------------------------------------------
+*/
+
+$montserrat: 'Montserrat';
+$dm-sans: 'DM Sans';
+
+$font-family-headliner: $montserrat, sans-serif;
+$font-family-base: $dm-sans, sans-serif;
+
+
+$font-size-baseline: 1rem; /* 16px */
+$font-size-sm: $font-size-baseline * 0.875; /* 14px */
+$font-size-xs: $font-size-baseline * 0.75; /* 12px */
+
+$h1-font-size-sm: $font-size-baseline * 3; /* 48px */
+$h2-font-size-sm: $font-size-baseline * 2.25; /* 36px */
+$h3-font-size-sm: $font-size-baseline * 2; /* 32px */
+$h4-font-size-sm: $font-size-baseline * 1.5; /* 24px */
+$h5-font-size-sm: $font-size-baseline * 1.125; /* 18px */
+$h6-font-size-sm: $font-size-baseline * 0.75; /* 13px */
+$btn-font-size-sm: $font-size-xs; /* 12px */
+
+
+$h1-font-size: $font-size-baseline * 3; /* 48px */
+$h2-font-size: $font-size-baseline * 2.25; /* 36px */
+$h3-font-size: $font-size-baseline * 2; /* 32px */
+$h4-font-size: $font-size-baseline * 1.5; /* 24px */
+$h5-font-size: $font-size-baseline * 1.125; /* 18px */
+$h6-font-size: $font-size-baseline * 0.75; /* 13px */
+$btn-font-size: $font-size-xs; /* 12px */
+
+
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi: 600;
+$font-weight-bold: 700;
+
+
+//----- NAVBAR -----//
+
+$navbar-height: 5rem;
+$navbar-height-sm: 5rem;
+
+
+/*
+--------------------------------------------------------------------------------
+VARIABLES
+--------------------------------------------------------------------------------
+*/
+$gray-border: 1px solid $gray-4;
+$light-border: 1px solid $gray-2;
+
+/*
+--------------------------------------------------------------------------------
+Border-radius
+--------------------------------------------------------------------------------
+*/
+
+$b-radius-1: 8px;
+$b-radius-2: 14px;
+$b-radius-3: 18px;
+$b-radius-4: 40px;
+

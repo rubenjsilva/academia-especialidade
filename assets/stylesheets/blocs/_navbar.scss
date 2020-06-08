@@ -1,0 +1,167 @@
+/*
+--------------------------------------------------------------------------------
+Praxis Logo & Burguer Menu
+--------------------------------------------------------------------------------
+*/
+
+.menu {
+    .navbar {
+        .brand-container {
+            @include position(fixed, 0, 0);
+            display: flex;
+            z-index: 20;
+
+            .navbar-brand {
+                background-color: $white;
+                width: $navbar-height-sm * 2;
+                height: $navbar-height-sm;
+                padding: 1.8rem 2rem;
+
+                @include tablet{
+                    width: $navbar-height*2;
+                    height: $navbar-height;
+                    padding: 2.5rem 3.4rem;
+                }
+
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .burger-menu {
+                background-color: $white;
+                position: relative;
+                height: $navbar-height-sm;
+                width: $navbar-height-sm;
+                z-index: 20;
+
+                @include tablet{
+                    width: $navbar-height;
+                    height: $navbar-height;
+                }
+
+                &:hover {
+                    @include transition(all, 0.4);
+
+                    .bar {
+                        @include transition(all, 0.3);
+                        width: 4.5rem;
+
+                        &:before {
+                            @include transition(all, 0.4);
+                            width: 4.5rem;
+                        }
+                    }
+                }
+
+                .bar {
+                    @include transition(all, 0.3);
+                    margin: auto 1.4rem;
+                    width: 3rem;
+
+                    @include tablet{
+                        margin: auto 2.2rem;
+                    }
+
+                    &,
+                    &::before,
+                    &::after {
+                        content: "";
+                        @include position(absolute, 50%, 0);
+                        @include transition(transform, 0.4);
+                        background: $dark;
+                        height: 3px;
+                    }
+
+                    &:before {
+                        @include transition(all, 0.4);
+                        width: 4rem;
+                        top: -1rem;
+                    }
+
+                    &:after {
+                        width: 4.5rem;
+                        top: 1rem;
+                    }
+
+                    &:before,
+                    &:after {
+                        transform: rotate(0deg);
+                    }
+                }
+
+                &.active {
+                    .bar {
+                        background: 0;
+
+                        &:before {
+                            width: 4.5rem;
+                            transform: rotate(45deg);
+                        }
+
+                        &:after {
+                            transform: rotate(-45deg);
+                        }
+
+                        &:before,
+                        &:after {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .shopping-menu {
+            @include position(fixed, 0, null, null, 0);
+            background-color: $secondary;
+            width: $navbar-height-sm;
+            height: $navbar-height-sm;
+            padding: 2rem;
+            z-index: 10;
+
+            @include tablet {
+                width: $navbar-height;
+                height: $navbar-height;
+                padding: 3rem;
+            }
+
+            &.filled-cart {
+                &:after {
+                    content: '';
+                    @include position(absolute, 1.2rem, null, null, 1.2rem);
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background-color: $dark-green;
+                    border-radius: 50%;
+                    z-index: 11;
+
+                    @include tablet {
+                        top: 2rem;
+                        right: 2.2rem;
+                    }
+                }
+            }
+
+            .shopping-cart-icon {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*
+--------------------------------------------------------------------------------
+Animations
+--------------------------------------------------------------------------------
+*/
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

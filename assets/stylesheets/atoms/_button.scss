@@ -1,0 +1,144 @@
+.btn {
+	@include transition(all, 0.4);
+	border-radius: $b-radius-3;
+	min-width: 10rem;
+	height: 3rem;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	float: left;
+	text-align: center;
+	position: relative;
+
+	@include tablet {
+		min-width: 12rem;
+	}
+
+	&-primary {
+		background-color: $primary;
+		color: $white;
+
+		&:hover {
+			background-color: darken($primary, 5%);
+		}
+	}
+
+	&-secondary {
+		background-color: $white;
+		color: $primary;
+		border: 1px solid $primary;
+
+		&:hover {
+			border-color: darken($primary, 5%);
+		}
+	}
+
+	&-small {
+		min-width: 18rem;
+		height: 2.25rem;
+		padding: 0.625rem 1rem;
+	}
+
+	&-large {
+		background-color: $secondary;
+		min-width: 18rem;
+		height: 4rem;
+		padding: 1.5rem 2.5rem;
+	}
+
+	&-icon {
+		padding-left: 15%;
+		padding-right: 10%;
+
+		@include hd {
+			padding-left: 20%;
+		}
+
+		@include resolution(1400px) {
+			padding-left: 15%;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+
+			&.icon {
+				position: absolute;
+				top: 50%;
+				left: 10%;
+				transform: translate(0, -50%);
+
+				@include desktop {
+					left: 10%;
+				}
+
+				@include hd {
+					left: 15%;
+				}
+
+				@include resolution(1600px) {
+					left: 20%;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		&.dark {
+			background-color: darken($dark, 7%);
+		}
+
+		&.light {
+			background-color: darken($white, 7%);
+		}
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+
+	&.delete {
+		min-width: auto;
+		height: auto;
+		padding: .5rem 0;
+		color: $dark;
+		border-bottom: 2px solid $dark;
+	}
+}
+
+.disabled {
+	cursor: default;
+	opacity: 0.4;
+	pointer-events: none !important;
+}
+
+.under-btn {
+	text-transform: uppercase;
+	padding-bottom: 0.5rem;
+}
+
+
+.back-link-container {
+	@include transition;
+	padding: 2.5rem 1.5rem;
+	background-color: $white;
+	height: $navbar-height-sm;
+	position: fixed;
+	top: 0;
+	left: $navbar-height-sm*3;
+	z-index: 9;
+
+	@include tablet{
+		left: $navbar-height*3;
+		height: $navbar-height;
+		padding: 3.5rem 2.5rem;
+	}
+
+	.back-link {
+		color: $dark;
+		text-transform: uppercase;
+
+		&-arrow {
+			margin-right: 1rem;
+		}
+	}
+}
