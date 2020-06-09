@@ -28,6 +28,8 @@ h1 {
   font-size: $h1-font-size-sm;
   font-weight: $font-weight-semi;
   line-height: 110%;
+  color: $dark-green;
+  margin-bottom: 1.5rem;
 
   @include tablet {
     font-size: $h1-font-size;
@@ -38,6 +40,8 @@ h2 {
   font-size: $h2-font-size-sm;
   font-weight: $font-weight-semi;
   line-height: 120%;
+  color: $dark-green;
+  margin-bottom: 1rem;
 
   @include tablet {
     font-size: $h2-font-size;
@@ -114,10 +118,6 @@ a, button, .btn {
 
 a {
   text-decoration: none;
-
-  &:active {
-    color: $dark-green;
-  }
 }
 
 label, .label {
@@ -144,4 +144,8 @@ small {
   @include tablet {
     font-size: $font-size-sm
   }
+}
+
+.smaller {
+  font-size: $font-size-xs;
 }

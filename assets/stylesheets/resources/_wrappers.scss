@@ -1,16 +1,27 @@
-.gen-wrapper {
+.gen-wrapper, .md-wrapper {
   width: 100%;
-  margin-right: $margin-sm;
-  margin-left: $margin-sm;
+  padding-right: $margin-sm;
+  padding-left: $margin-sm;
   max-width: $container-max-width;
 
   @include tablet {
-    margin-right: $margin-md;
-    margin-left: $margin-md;
+    padding-right: $margin-md;
+    padding-left: $margin-md;
   }
 
-  @include desktop {
-    margin-right: $margin-lg;
-    margin-left: $margin-lg;
+  @include resolution (1400px) { 
+    margin-left: auto;
+    margin-right: auto;
   }
+}
+
+.gen-wrapper {
+  @include desktop {
+    padding-right: $margin-lg;
+    padding-left: $margin-lg;
+  }
+}
+
+.height-wrapper {
+  height: 100vh;
 }

@@ -22,4 +22,18 @@ $orange:  #FFE7CA;
 $red:  #EB5757;
 $green:  #27AE60;
 
-
+$color-map: (
+    "dark":#333333,
+    "gray-1":#4F4F4F,
+    "gray-2":#828282,
+    "gray-3":#BDBDBD,
+    "gray-4":#E0E0E0,
+    "gray-5":#F2F2F2,
+    "white":#ffffff,
+    "primary": #2C7D98,
+    "light-primary": #C0D8E0,
+    "secondary": #A6DCE9,
+    "light-secondary": #ECF8FB,
+    "dark-green": #214753,
+    "danger":  $red
+);
