@@ -1,6 +1,6 @@
 // stylelint-disable declaration-no-important
 
-// Margin and Padding
+/* Margin and Padding
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
@@ -71,3 +71,4 @@
     }
   }
 }
+*/

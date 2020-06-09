@@ -1,16 +1,20 @@
 .btn {
 	@include transition(all, 0.4);
 	border-radius: $b-radius-3;
-	min-width: 10rem;
 	height: 3rem;
 	padding: 1rem 2rem;
-	text-transform: uppercase;
-	float: left;
-	text-align: center;
 	position: relative;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+	text-transform: uppercase;
+	text-decoration: none;
 
-	@include tablet {
-		min-width: 12rem;
+	.icon {
+		display: inline-block;
+		white-space: nowrap;
+		margin-left: 1rem;
+		overflow: hidden;
 	}
 
 	&-primary {
@@ -33,7 +37,6 @@
 	}
 
 	&-small {
-		min-width: 18rem;
 		height: 2.25rem;
 		padding: 0.625rem 1rem;
 	}
@@ -48,14 +51,6 @@
 	&-icon {
 		padding-left: 15%;
 		padding-right: 10%;
-
-		@include hd {
-			padding-left: 20%;
-		}
-
-		@include resolution(1400px) {
-			padding-left: 15%;
-		}
 
 		img {
 			max-width: 100%;
@@ -79,16 +74,6 @@
 					left: 20%;
 				}
 			}
-		}
-	}
-
-	&:hover {
-		&.dark {
-			background-color: darken($dark, 7%);
-		}
-
-		&.light {
-			background-color: darken($white, 7%);
 		}
 	}
 
@@ -140,5 +125,34 @@
 		&-arrow {
 			margin-right: 1rem;
 		}
+	}
+}
+
+
+.icon {
+	&-sm {
+		width: 14px;
+		height: 14px;
+	}
+
+	&-md {
+		width: 18px;
+		height: 18px;
+	}
+
+	&-lg {
+		width: 24px;
+		height: 24px;
+	}
+
+	&-white svg path {
+		fill: $white;
+	}
+
+	&-primary svg path {
+		fill: $primary;
+	}
+	&-secondary svg path {
+		fill: $secondary;
 	}
 }
