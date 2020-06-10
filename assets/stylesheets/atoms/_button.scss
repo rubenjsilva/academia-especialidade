@@ -181,3 +181,28 @@
 svg, img {
 	height: 100%;
 }
+
+
+.arrow-link {
+	margin: .5rem 0;
+
+	&-primary {
+		color: $primary;
+
+		svg path {
+			fill: $primary;
+		}
+	}
+
+	&-secondary {
+		color: $secondary;
+
+		svg path {
+			fill: $secondary;
+		}
+	}
+
+	.icon {
+		vertical-align: bottom;
+	}
+}

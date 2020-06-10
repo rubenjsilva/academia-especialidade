@@ -1,0 +1,39 @@
+
+.accordion {
+    width: 100%;
+    margin: 0 auto;
+
+    .accordion-item {
+        .accordion-header, .accordion-body {
+            background: $white;
+        }
+
+        .accordion-header {
+            @include transition();
+            cursor: pointer;
+            color: $dark-green;
+            font-weight: $font-weight-semi;
+            padding: 1rem 0;
+        }
+
+        .accordion-body {
+            background: $white;
+            display: none;
+
+            .accordion-body-contents {
+                padding: 0 4rem 2rem 0;
+                color: $gray-1;
+            }
+        }
+    }
+}
+
+
+.accordion-item > .accordion-header:after {
+  content: "\f3d0";
+  float: right;
+  position: relative;
+  top: -2px;
+  transition: .3s all;
+  transform: rotate(0deg);
+}
