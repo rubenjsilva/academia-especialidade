@@ -1,15 +1,15 @@
 .checkbox-container {
     .checkmark {
-        border-radius: 2px;
+        border-radius: 4px;
 
         &:after {
             content: "";
             position: absolute;
             display: none;
             left: 5px;
-            top: 1px;
-            width: 4px;
-            height: 8px;
+            top: 2px;
+            width: 3px;
+            height: 6px;
             border: 1px solid $white;
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
@@ -17,12 +17,16 @@
     }
 
     &:hover input ~ .checkmark {
-        border-color: $dark;
+        border-color: $primary;
     }
 
     input:checked ~ .checkmark {
-        border-color: $dark;
-        background-color: $dark;
+        border-color: $primary;
+        background-color: $primary;
+    }
+
+    input:checked ~ .checkbox-label {
+        color: $primary;
     }
 
     input:checked ~ .checkmark:after {

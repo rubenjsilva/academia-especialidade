@@ -90,6 +90,11 @@
 		}
 	}
 
+	&.full-centered {
+		justify-content: center;
+		width: 100%;
+	}
+
 	/* &:hover {
 		.arrow-right {
 			svg {
@@ -205,4 +210,13 @@ svg, img {
 	.icon {
 		vertical-align: bottom;
 	}
+}
+
+
+.inline-link {
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	text-transform: none;
+	letter-spacing: inherit;
 }

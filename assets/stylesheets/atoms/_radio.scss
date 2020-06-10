@@ -1,6 +1,6 @@
 .radio-container {
     .checkmark {
-        border-radius: 50%;
+        border-radius: 6px;
         
         &:after {
             @include transition;
@@ -17,11 +17,11 @@
     }
 
     &:hover input ~ .checkmark {
-        border-color: $dark;
+        border-color: $primary;
     }
 
     input:checked ~ .checkmark {
-        border-color: $dark;
+        border-color: $primary;
         background-color: $white;
     }
 

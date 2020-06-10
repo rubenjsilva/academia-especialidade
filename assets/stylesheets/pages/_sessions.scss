@@ -1,0 +1,11 @@
+.session-wrapper {
+    margin-top: calc(6rem + #{$navbar-height});
+
+    .content-container {
+        height: 100%;
+    }
+
+    .session-illustration {
+        margin-left: 4rem;
+    }
+}

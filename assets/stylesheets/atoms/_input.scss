@@ -1,47 +1,61 @@
-label {
-    margin-bottom: 1rem;
-    display: inline-block;
-    color: $gray-2;
-}
 
-.field-input {
-    @include transition;
-    display: inline-block;
-    height: 4.6rem;
-    margin: 0;
-    padding: 0 1.6rem;
-    width: 100%;
-    color: $dark;
-    border: 1px solid $gray-3;
+.field-group { 
+    position: relative; 
+    margin-bottom: 1rem; 
 
-    &.light {
-        color: $white;
-        border: 1px solid $gray-3;
+    &.textfield {
+        input {
+            @include transition;
+            width: 100%;
+            height: 3rem;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            font-size: $font-size-sm;
+            padding: 1rem 1.5rem;
+            display: block;
+            border: 1px solid $gray-4;
+            border-radius: $b-radius-3;
+
+            &:focus {
+                outline: none;
+                border: 2px solid $secondary;
+            }
+
+            &.disabled, &:disabled {
+                color: $gray-3;
+                background-color: $gray-5;
+            }
+        }
+
+        label {
+            @include transition;
+            background-color: $white;
+            color: $gray-3; 
+            font-size: $font-size-sm;
+            font-weight: $font-weight-regular;
+            letter-spacing: 0.02em;
+            position: absolute;
+            left: 1.5rem;
+            top: 1rem;
+            pointer-events: none;
+            padding: 0 4px;
+        }
+
+        input {
+            &:focus ~ label, &:valid ~ label{
+                font-size: $font-size-xs;
+                top: -6px;
+            }
+            
+            &:focus ~ label {
+                font-weight: $font-weight-bold;
+                color: $secondary;
+            }
+        }
     }
 
     &.error {
-        color: $red;
-        border: 1px solid $red;
-    }
-
-    &.disabled, &:disabled {
-        color: $gray-3;
-    }
-
-    &:focus {
-        border-color: $dark;
-    }
-}
-
-.form-field {
-    margin-bottom: 2rem;
-
-    @include tablet {
-        margin-bottom: 3rem;
-    }
-
-    &.error {
-        .field-input {
+        input {
             color: $red;
             border: 1px solid $red;
         }
@@ -58,8 +72,6 @@ label {
     }
 }
 
-
-
 /*
 --------------------------------------------------------------------------------
 RADIO & CHECKBOX INPUTS (General configs)
@@ -70,7 +82,7 @@ RADIO & CHECKBOX INPUTS (General configs)
     cursor: pointer;
     display: block;
     position: relative;
-    padding-left: 3rem;
+    padding-left: 2rem;
     user-select: none;
 
     input {
@@ -82,109 +94,69 @@ RADIO & CHECKBOX INPUTS (General configs)
     .checkmark {
         @include transition;
         position: absolute;
-        top: 3px;
+        top: 0;
         left: 0;
-        height: 18px;
-        width: 18px;
+        height: 1rem;
+        width: 1rem;
         background-color: $white;
-        border: 1px solid $gray-3;
+        border: 1px solid $gray-4;
+        border-radius: $b-radius-1;
     }
 }
 
 label {
     &.radio-container, &.checkbox-container {
-        font-family: $font-family-base;
-        color: $dark;
+        color: $gray-2;
         letter-spacing: 0.02em;
         text-transform: none;
         margin-bottom: .5rem;
     }
 }
 
+
 /*
 --------------------------------------------------------------------------------
-QUANTITY INPUT
+AUTOCOMPLETE INPUTS
 --------------------------------------------------------------------------------
 */
 
-.quantity-wrapper {
-    display: flex;
+.autocomplete-items {
     position: absolute;
-    width: 100%;
+    border: 1px solid $gray-5;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
     left: 0;
-    bottom: 2rem;
-    z-index: 4;
+    right: 0;
 
-    .quantity-input {
-        position: relative;
-        min-width: 14rem;
-        height: 5rem;
-        float: left;
+    div {
+        cursor: pointer;
+        padding: 10px;
+        background-color: $white; 
+        border-bottom: 1px solid $gray-5; 
 
-        @include tablet {
-            min-width: 12rem;
+        &:hover {
+            background-color: $gray-5; 
         }
 
-        @include resolution(1400px) {
-            min-width: 14rem;
-        }
-
-        @include resolution(1600px) {
-            min-width: 15rem;
-        }
-
-        input {
-            height: 100%;
-            width: 100%;
-            line-height: 1.65;
-            text-align: center;
-            float: left;
-            display: block;
-            border: 1px solid $dark;
-            background-color: $white;
-
-            &:focus {
-                outline: 0;
-            }
-        }
-
-        .quantity-button {
-            cursor: pointer;
-            color: $dark;
-            position: absolute;
-            height: 100%;
-            width: 4.5rem;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            -o-user-select: none;
-            user-select: none;
-
-            @include tablet {
-                width: 4rem;
-            }
-
-            @include resolution(1400px) {
-                width: 4.5rem;
-            }
-
-            &.quantity-up {
-                top: 0;
-                right: 0;
-                border-left: 1px solid $dark;
-            }
-
-            &.quantity-down {
-                top: 0;
-                left: 0;
-                border-right: 1px solid $dark;
-            }
+        &:last-child {
+            border-bottom-left-radius: $b-radius-3;
+            border-bottom-right-radius: $b-radius-3;
         }
     }
 }
+
+.autocomplete-active {
+    background-color: $light-primary !important; 
+    color: $primary; 
+}
+
+/*
+--------------------------------------------------------------------------------
+Remove chrome input configs
+--------------------------------------------------------------------------------
+*/
 
 input[type="number"] {
     -moz-appearance: textfield;
@@ -193,4 +165,12 @@ input[type="number"] {
     &::-webkit-outer-spin-button {
         -webkit-appearance: none;
     }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: $dark;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
