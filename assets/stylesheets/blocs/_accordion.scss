@@ -11,9 +11,14 @@
         .accordion-header {
             @include transition();
             cursor: pointer;
-            color: $dark-green;
-            font-weight: $font-weight-semi;
-            padding: 1rem 0;
+            margin-top: 2rem;
+
+            .accordion-title {
+                color: $dark-green;
+                font-weight: $font-weight-semi;
+                padding: .5rem 1rem 1rem 0rem;
+                margin: 0;
+            }
         }
 
         .accordion-body {
@@ -25,15 +30,44 @@
                 color: $gray-1;
             }
         }
+
+        &.active {
+            .icon-container .dash {
+                &:after {
+                    transform: rotate(0deg);
+                }
+            }
+        }
     }
 }
 
+.icon-container {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: $b-radius-2;
+    border: 1px solid $gray-5;
+    position: relative;
 
-.accordion-item > .accordion-header:after {
-  content: "\f3d0";
-  float: right;
-  position: relative;
-  top: -2px;
-  transition: .3s all;
-  transform: rotate(0deg);
+    .dash {
+        @include transition();
+        margin-left: .7rem;
+        width: 1rem;
+
+        &,
+        &:after {
+            content: "";
+            @include position(absolute, 50%, 0);
+            @include transition(transform, 0.4);
+            background: $primary;
+            height: 2px;
+            border-radius: $b-radius-2;
+        }
+
+        &:after {
+            width: 1rem;
+            top: 0;
+            transform: rotate(90deg);
+        }
+    }
 }
