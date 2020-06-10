@@ -1,0 +1,73 @@
+
+.accordion {
+    width: 100%;
+    margin: 0 auto;
+
+    .accordion-item {
+        .accordion-header, .accordion-body {
+            background: $white;
+        }
+
+        .accordion-header {
+            @include transition();
+            cursor: pointer;
+            margin-top: 2rem;
+
+            .accordion-title {
+                color: $dark-green;
+                font-weight: $font-weight-semi;
+                padding: .5rem 1rem 1rem 0rem;
+                margin: 0;
+            }
+        }
+
+        .accordion-body {
+            background: $white;
+            display: none;
+
+            .accordion-body-contents {
+                padding: 0 4rem 2rem 0;
+                color: $gray-1;
+            }
+        }
+
+        &.active {
+            .icon-container .dash {
+                &:after {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
+.icon-container {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: $b-radius-2;
+    border: 1px solid $gray-5;
+    position: relative;
+
+    .dash {
+        @include transition();
+        margin-left: .7rem;
+        width: 1rem;
+
+        &,
+        &:after {
+            content: "";
+            @include position(absolute, 50%, 0);
+            @include transition(transform, 0.4);
+            background: $primary;
+            height: 2px;
+            border-radius: $b-radius-2;
+        }
+
+        &:after {
+            width: 1rem;
+            top: 0;
+            transform: rotate(90deg);
+        }
+    }
+}

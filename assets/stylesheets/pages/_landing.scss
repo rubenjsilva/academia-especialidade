@@ -1,0 +1,81 @@
+.home-wrapper {
+    .ilu-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .content-container {
+        height: 100%;
+    }
+}
+
+.exp-wrapper {
+    .sell-listing {
+        .sell-list-item {
+            padding: 0 3rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 5rem;
+
+            .badge-wrapper {
+                width: 4rem;
+                height: 4rem;
+                margin-bottom: 1.5rem;
+                position: relative;
+
+                .badge-background {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 100%;
+                    background-color: $orange;
+                }
+
+
+                img {
+                    width: 3.5rem;
+                    position: absolute;
+                    right: -1rem;
+                    top: 0;
+                }
+            }
+
+            .listing-title {
+                @extend .mb-24;
+            }
+
+            .listing-description {
+                @extend .color-gray-2;
+            }
+        }
+    }
+}
+
+.santander-wrapper {
+    margin-top: 12rem;
+}
+
+.testimonials-wrapper {
+    margin-top: 8rem;
+}
+
+.faq-wrapper {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    .faq-illustration {
+        margin-left: -2rem;
+    }
+}
+
+
+
+.ilu-bg {
+    img {
+        pointer-events: none;
+    }
+}

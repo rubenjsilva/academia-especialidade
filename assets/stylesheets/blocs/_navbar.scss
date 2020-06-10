@@ -1,0 +1,104 @@
+/*
+--------------------------------------------------------------------------------
+Praxis Logo & Burguer Menu
+--------------------------------------------------------------------------------
+*/
+
+.page-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1500;
+
+    .main-menu {
+        width: 100%;
+
+        .main-menu-container {
+            position: relative;
+            min-height: $navbar-height;
+            display: flex;
+            justify-content: space-between;
+            padding: .75rem 0;
+
+            .header-navigation {
+                padding: 1.5rem 0;
+                
+                ul {
+                    li {
+                        position: relative;
+                        display: inline-block;
+
+                        .menu-link {
+                            color: $gray-2;
+                            font-weight: $font-weight-semi;
+                            font-size: .625rem;
+                            letter-spacing: 0.2em;
+                            text-align: center;
+                            padding: 1rem 1.5rem;
+                            vertical-align: middle;
+
+                            &:hover {
+                                color: $gray-1;
+                            }
+
+                            &.active {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-menu {
+        .menu-item {
+            .item-container {
+                background-color: $white;
+                border-radius: $b-radius-2;
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                padding: .5rem;
+            }
+        }
+    }
+
+    /*.shopping-menu {
+        @include position(fixed, 0, null, null, 0);
+        background-color: $secondary;
+        width: $navbar-height-sm;
+        height: $navbar-height-sm;
+        padding: 2rem;
+        z-index: 10;
+
+        @include tablet {
+            width: $navbar-height;
+            height: $navbar-height;
+            padding: 3rem;
+        }
+
+        &.filled-cart {
+            &:after {
+                content: '';
+                @include position(absolute, 1.2rem, null, null, 1.2rem);
+                width: 1.6rem;
+                height: 1.6rem;
+                background-color: $dark-green;
+                border-radius: 50%;
+                z-index: 11;
+
+                @include tablet {
+                    top: 2rem;
+                    right: 2.2rem;
+                }
+            }
+        }
+
+        .shopping-cart-icon {
+            width: 100%;
+        }
+    }*/
+}
