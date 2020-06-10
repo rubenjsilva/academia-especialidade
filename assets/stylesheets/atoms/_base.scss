@@ -142,7 +142,7 @@ strong {
   font-weight: $font-weight-bold;
 }
 
-small {
+small, .small {
   font-size: $font-size-sm;
 
   @include tablet {

@@ -72,11 +72,6 @@
     }
 }
 
-
-
-
-
-
 /*
 --------------------------------------------------------------------------------
 RADIO & CHECKBOX INPUTS (General configs)
@@ -116,4 +111,66 @@ label {
         text-transform: none;
         margin-bottom: .5rem;
     }
+}
+
+
+/*
+--------------------------------------------------------------------------------
+AUTOCOMPLETE INPUTS
+--------------------------------------------------------------------------------
+*/
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid $gray-5;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    div {
+        cursor: pointer;
+        padding: 10px;
+        background-color: $white; 
+        border-bottom: 1px solid $gray-5; 
+
+        &:hover {
+            background-color: $gray-5; 
+        }
+
+        &:last-child {
+            border-bottom-left-radius: $b-radius-3;
+            border-bottom-right-radius: $b-radius-3;
+        }
+    }
+}
+
+.autocomplete-active {
+    background-color: $light-primary !important; 
+    color: $primary; 
+}
+
+/*
+--------------------------------------------------------------------------------
+Remove chrome input configs
+--------------------------------------------------------------------------------
+*/
+
+input[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: $dark;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset;
+  transition: background-color 5000s ease-in-out 0s;
 }

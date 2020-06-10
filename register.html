@@ -84,43 +84,57 @@
 
 
       <main>
-        <section class="session-wrapper mt-128 mb-96">
+        <section class="session-wrapper mb-96">
           <div class="gen-wrapper">
-            <div class="row align-items-center content-container">
+            <div class="row align-items-start content-container">
               <div class="col-md-5">
-                <h4 class="mb-32 mt-32">Bem vindo à<br><b class="color-primary">Academia da Especialidade</b></h4>
-                <p class="mb-48 color-gray-3">Entra na academia para obter acesso a conteúdos exclusivos.</p>
+                <h4 class="mb-32 mt-32">Regista-te na<br><b class="color-primary">Academia da Especialidade</b></h4>
+                <p class="mb-48 color-gray-3">Resgita-te na academia para obter acesso a conteúdos exclusivos.</p>
                 <form>
+                    <div class="field-group textfield">      
+                        <input type="text" id="name" name="name" autocomplete="on" required>
+                        <label for="name">Nome completo</label>
+                    </div>
+
                     <div class="field-group textfield">      
                         <input type="text" id="email" name="email" autocomplete="on" required>
                         <label for="email">Email</label>
                     </div>
+
+                    <div class="field-group textfield">      
+                        <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="on" required>
+                        <label for="phone">Número de telemóvel</label>
+                    </div>
                     
                     <div class="field-group textfield">      
-                        <input type="password" id="password" name="password" autocomplete="current-password" required>
+                        <input type="text" id="institution" name="institution" required>
+                        <label for="institution">Insituição de ensino</label>
+                    </div>
+
+                    <div class="field-group textfield">      
+                        <input type="number" id="year" name="year" required>
+                        <label for="year">Ano de exame de acesso</label>
+                    </div>
+
+                    <div class="field-group textfield">      
+                        <input type="password" id="password" name="password" required>
                         <label for="password">Password</label>
                     </div>
 
-                    <div class="d-flex justify-content-between">
-                        <label class="checkbox-container">
-                            <input type="checkbox" name="checkbox">
-                            <small class="checkbox-label">Lembrar-me</small>
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <small>
-                            <a href="reset-password.html" class="color-gray-2 inline-link">Esqueceu-se da password?</a>
-                        </small>
+                    <div class="field-group textfield">      
+                        <input type="password" id="password" name="password" required>
+                        <label for="password">Confirmar password</label>
                     </div>
-                </form>
 
                 <div class="button-wrapper mt-48">
-                    <button class="btn btn-primary full-centered">Entrar</button>
+                    <button class="btn btn-primary full-centered">Registar</button>
                 </div>
 
+                <p class="t-center small mt-16">Ao registares-te, concordas com os nossos <a href="termos.html" class="inline-link color-primary">Termos e condições</a> e <a href="termos.html" class="inline-link color-primary">Política de privacidade.</a></p>
+
                 <p class="mt-32 t-center">
-                    <span>Ainda não tens uma conta?</span>
-                    <a href="register.html" class="inline-link color-primary">Registar</a>
+                    <span>Já tens uma conta?</span>
+                    <a href="login.html" class="inline-link color-primary">Fazer login</a>
                 </p>
             </div>
 
@@ -182,6 +196,11 @@
         </div>
       </footer>
     </main>
+
+    <script src="assets/js/autcomplete.js"></script>
+    <script>
+      autocomplete(document.getElementById("institution"), insitutions);
+    </script>
 
   </body>
 </html>
