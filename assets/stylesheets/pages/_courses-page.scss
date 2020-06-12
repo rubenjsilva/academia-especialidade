@@ -1,0 +1,26 @@
+.courses-wrapper {
+    .content-container {
+        height: 100%;
+    }
+
+    .illu-bg {
+        position: absolute;
+        top: 0;
+        right: -4rem;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+.listicle {
+    &-item {
+        h5 {
+            background-color: rgba($orange, .2);
+            color: $primary;
+            padding: 1.5rem;
+            border-radius: $b-radius-4;
+        }
+    }
+
+    margin-top: -15vh;
+}

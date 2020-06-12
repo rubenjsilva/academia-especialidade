@@ -30,7 +30,7 @@
 	&-secondary {
 		background-color: $white;
 		color: $primary;
-		border: 1px solid $primary;
+		border: 2px solid $primary;
 
 		&:hover {
 			border-color: darken($primary, 5%);
