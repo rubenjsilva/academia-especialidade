@@ -132,8 +132,8 @@
             </div>
 
             <div class="row">
-              <div class="col-md-2">
-                <div class="custom-select">
+              <div class="col d-flex">
+                <div class="custom-select mr-16">
                   <select>
                     <option value="0">Coimbra</option>
                     <option value="1">Lisboa</option>
@@ -143,7 +143,28 @@
                     <option value="5">Braga</option>
                   </select>
                 </div>
+                
+                <label class="custom-checkbox-container mr-16">
+                  <input type="checkbox" name="checkbox" checked>
+                  <small class="checkbox-label">Semana</small>
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="custom-checkbox-container mr-16">
+                  <input type="checkbox" name="checkbox">
+                  <small class="checkbox-label">Sábado</small>
+                  <span class="checkmark"></span>
+                </label>
+
+                <div class="ml-auto">
+                  <div class="toggle" id="switch">
+                    <div class="toggle-button"></div>
+                    <div class="toggle-text-on">Online</div>
+                    <div class="toggle-text-pre">Presencial</div>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
         </section>
 
@@ -241,5 +262,6 @@ Há cursos durante a semana no Porto, Braga, Coimbra, Covilhã e Lisboa, e em v�
     </main>
 
     <script src="assets/js/custom-dropdown.js"></script>
+    <script src="assets/js/switch.js"></script>
   </body>
 </html>
