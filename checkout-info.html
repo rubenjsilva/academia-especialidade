@@ -49,7 +49,7 @@
                     <a href="formacao.html" class="menu-link">Formação</a>
                   </li>
                   <li>
-                    <a href="material.html" class="menu-link">Perguntas e Material</a>
+                    <a href="login.html" class="menu-link">Perguntas e Material</a>
                   </li>
                   <li>
                     <a href="sobre.html" class="menu-link">Sobre nós</a>
@@ -70,27 +70,13 @@
               </div>
 
               <div class="menu-item shopping-menu">
-                <a href="login.html" class="item-container">
+                <a href="#" class="item-container">
                   <span class="icon icon-md icon-secondary cart">
                     <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0176 1.96881H16.1161C16.0508 1.97382 15.9192 2.06885 15.8936 2.13088L13.2431 10.003C13.2383 10.016 13.2289 10.025 13.2241 10.038C13.2099 10.0751 13.1891 10.1061 13.1701 10.1411C13.1323 10.2121 13.0906 10.2781 13.0385 10.3372C13.012 10.3672 12.9845 10.3922 12.9542 10.4192C12.8946 10.4722 12.8292 10.5152 12.7582 10.5512C12.726 10.5683 12.6957 10.5873 12.6607 10.6003C12.5508 10.6423 12.4362 10.6703 12.316 10.6703C12.316 10.6703 12.316 10.6703 12.315 10.6703H4.1721C3.75828 10.6703 3.38991 10.4092 3.25071 10.018L1.05281 3.81655C0.945804 3.51543 0.991258 3.1813 1.17497 2.92019C1.35773 2.65909 1.65603 2.50403 1.97421 2.50403H13.7033L14.0413 1.49863C14.3283 0.646285 15.2203 0.00402832 16.1161 0.00402832H18.0176C18.5584 0.00402832 18.9959 0.443204 18.9959 0.986421C18.9959 1.52964 18.5584 1.96881 18.0176 1.96881V1.96881ZM3.36056 4.46883L4.86244 8.70552H11.6152L13.0414 4.46883H3.36056V4.46883ZM4.50354 11.5767C5.44387 11.5767 6.20997 12.345 6.20997 13.2903C6.20997 14.2357 5.44387 15.004 4.50354 15.004C3.56226 15.004 2.79712 14.2357 2.79712 13.2903C2.79712 12.345 3.56226 11.5767 4.50354 11.5767V11.5767ZM12.6162 11.5767C13.5574 11.5767 14.3235 12.345 14.3235 13.2903C14.3235 14.2357 13.5574 15.004 12.6162 15.004C11.6749 15.004 10.9107 14.2357 10.9107 13.2903C10.9107 12.345 11.6749 11.5767 12.6162 11.5767V11.5767Z" fill="#A6DCE9"/>
                     </svg>
                   </span>
                 </a>
-
-                <div class="cart-pop-wrapper">
-                  <div class="cart-header">
-                    <h6>Carrinho</h6>
-                  </div>
-
-                  <div class="empty-cart-wrapper">
-                    <div class="cart-content">
-                      <p class="color-gray-3">O teu carrinho está vazio.<br>
-                      Continua à procura de um módulo.</p>
-                    </div>
-                    <a href="cursos.html" class="btn btn-secondary d-block w-100">Procurar módulo</a>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -99,66 +85,110 @@
 
 
       <main>
-        <section class="session-wrapper mb-96">
+        <section class="checkout-wrapper">
           <div class="gen-wrapper">
-            <div class="row align-items-start content-container">
-              <div class="col-md-5">
-                <h4 class="mb-32 mt-32">Regista-te na<br><b class="color-primary">Academia da Especialidade</b></h4>
-                <p class="mb-48 color-gray-3">Resgita-te na academia para obter acesso a conteúdos exclusivos.</p>
+            <div class="row">
+              <div class="col">
+                <div class="tab-indicator">
+                  <h6 class="tab-page active">1. Informação</h6>
+                  <h6 class="tab-page">2. Pagamento</h6>
+                  <h6 class="tab-page">3. Confirmação</h6>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-7">
+                <h4 class="checkout-headline">Dados de faturação</h4>
                 <form>
-                    <div class="field-group textfield">      
+                  <div class="row">
+                    <div class="col-6 field-group textfield">      
                         <input type="text" id="name" name="name" autocomplete="on" required>
-                        <label for="name">Nome completo</label>
+                        <label for="name">Nome</label>
                     </div>
 
-                    <div class="field-group textfield">      
-                        <input type="text" id="email" name="email" autocomplete="on" required>
+                    <div class="col-6 field-group textfield">      
+                        <input type="text" id="lname" name="lname" autocomplete="on" required>
+                        <label for="lname">Apelido</label>
+                    </div>
+
+                    <div class="col-6 field-group textfield">      
+                      <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="on" required>
+                      <label for="phone">Nº de telemóvel</label>
+                    </div>
+                  
+                    <div class="col-6 field-group textfield">      
+                        <input type="text" id="email" name="email" autocomplete="on" autocomplete="on" required>
                         <label for="email">Email</label>
                     </div>
 
-                    <div class="field-group textfield">      
-                        <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="on" required>
-                        <label for="phone">Número de telemóvel</label>
-                    </div>
-                    
-                    <div class="field-group textfield">      
-                        <input type="text" id="institution" name="institution" required>
-                        <label for="institution">Insituição de ensino</label>
+                    <div class="col-12 field-group textfield">      
+                        <input type="number" id="nif" name="nif" inputmode="numeric" required>
+                        <label for="nif">NIF</label>
                     </div>
 
-                    <div class="field-group textfield">      
-                        <input type="number" id="year" name="year" required>
-                        <label for="year">Ano de exame de acesso</label>
+                    <div class="col-12 field-group textfield mt-16">      
+                        <input type="text" id="address" name="address" autocomplete="on" required>
+                        <label for="address">Morada</label>
                     </div>
 
-                    <div class="field-group textfield">      
-                        <input type="password" id="password" name="password" required>
-                        <label for="password">Password</label>
+                    <div class="col-4 field-group textfield">      
+                        <input type="text" id="city" name="city" required>
+                        <label for="city">Localidade</label>
                     </div>
 
-                    <div class="field-group textfield">      
-                        <input type="password" id="password" name="password" required>
-                        <label for="password">Confirmar password</label>
+                    <div class="col-4 field-group textfield">      
+                        <input type="text" id="zip" name="zip" inputmode="numeric" autocomplete="on" required>
+                        <label for="zip">Código postal</label>
                     </div>
 
-                <div class="button-wrapper mt-48">
-                    <button class="btn btn-primary full-centered">Registar</button>
+                    <div class="col-4 field-group textfield">      
+                        <input type="text" id="country" name="country" autocomplete="on" required>
+                        <label for="country">País</label>
+                    </div>
+                  </div>
+
+                  <div class="row mt-48">
+                    <div class="col button-wrapper d-flex justify-content-between align-items-baseline">
+                      <a href="carinho.html" class="arrow-link arrow-link-primary">Voltar ao carrinho</a>
+                      <button class="btn btn-primary">
+                        Pagamento
+                        <span class="icon icon-md icon-white arrow-right">
+                          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7984 8.52458C17.788 8.53696 17.7846 8.55219 17.7742 8.56362L13.5902 11.7772C13.3194 12.0743 12.8816 12.0743 12.6108 11.7772C12.3409 11.4829 12.3409 11.0039 12.6108 10.7087L14.4623 8.73217H0.66186C0.29589 8.73217 0 8.40554 0 8.00274C0 7.60088 0.29589 7.27426 0.66186 7.27426H14.4683L12.6108 5.29008C12.3409 4.99488 12.3409 4.51589 12.6108 4.22069C12.8816 3.92644 13.3194 3.92644 13.5902 4.22069L17.7742 7.43519C17.8045 7.46757 17.8183 7.50851 17.8417 7.54565C17.936 7.67135 18 7.82657 18 8.00274C18 8.20843 17.9221 8.39221 17.7984 8.52458Z" fill="white"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </form>
+            </div>
+
+            <div class="col-md-4">
+              <h4 class="checkout-headline">Resumo</h4>
+              <div class="summary-card">
+                <div class="d-flex justify-content-between">
+                  <h6>Sub-total</h6>
+                  <h6>440,00€</h6>
                 </div>
+                <div class="d-flex justify-content-between">
+                  <h6>Desconto</h6>
+                  <h6>0,00€</h6>
+                </div>
+                <div class="d-flex justify-content-between mt-24">
+                  <div class="d-flex align-items-baseline">
+                    <h4 class="color-primary">Total</h4>
+                    <small>(com IVA)</small>
+                  </div>
 
-                <p class="t-center small mt-16">Ao registares-te, concordas com os nossos <a href="termos.html" class="inline-link color-primary">Termos e condições</a> e <a href="termos.html" class="inline-link color-primary">Política de privacidade.</a></p>
-
-                <p class="mt-32 t-center">
-                    <span>Já tens uma conta?</span>
-                    <a href="login.html" class="inline-link color-primary">Fazer login</a>
-                </p>
+                  <h4 class="color-primary"><strong>440,00€</strong></h4>
+                </div>
+              </div>
             </div>
-
-            <div class="ilu-bg col-md-7">
-                <img class="w-100 session-illustration" src="assets/images/session-illustration.svg">
-            </div>
+          </div>
         </div>
-        </div>
-    </section>
+      </section>
 
       <footer class="footer">
         <div class="sitemap-wrapper gen-wrapper mt-80 mb-80">
@@ -211,11 +241,6 @@
         </div>
       </footer>
     </main>
-
-    <script src="assets/js/autcomplete.js"></script>
-    <script>
-      autocomplete(document.getElementById("institution"), insitutions);
-    </script>
 
   </body>
 </html>
