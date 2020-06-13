@@ -1,0 +1,44 @@
+.file-drop-area {
+  @include transition;
+  background-color: rgba($gray-5, .2);
+  border: 1px solid rgba($gray-3, .2);
+  border-radius: $b-radius-4;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 1.5rem;
+
+  &.is-active {
+    border: 1px solid $primary;
+    justify-content: start;
+
+    .file-msg {
+        color: $primary;
+    }
+  }
+}
+
+.file-msg {
+  color: $gray-3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.file-input {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+
+  &:focus {
+    outline: none;
+  }
+}

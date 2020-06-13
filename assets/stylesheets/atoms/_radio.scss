@@ -9,10 +9,10 @@
             display: none;
             top: 2px;
             left: 2px;
-            width: 1.2rem;
-            height: 1.2rem;
-            border-radius: 50%;
-            background: $dark;
+            width: 10px;
+            height: 10px;
+            border-radius: 4px;
+            background: $primary;
         }
     }
 
@@ -23,6 +23,10 @@
     input:checked ~ .checkmark {
         border-color: $primary;
         background-color: $white;
+    }
+
+    input:checked ~ .radio-label {
+        color: $primary;
     }
 
     input:checked ~ .checkmark:after {
