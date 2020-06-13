@@ -1,0 +1,24 @@
+.tab-indicator {
+    display: flex;
+    margin-bottom: 5rem;
+
+    .tab-page {
+        cursor: default;
+        color: $light-primary;
+        margin-right: 1.5rem;
+
+        &.active {
+            color: $primary;
+        }
+    }
+}
+
+.checkout-wrapper {
+    margin-top: calc(4rem + #{$navbar-height});
+    margin-bottom: 8rem;
+
+    .checkout-headline {
+        margin-bottom: 1.5rem;
+        color: $gray-1;
+    }
+}
