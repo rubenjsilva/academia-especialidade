@@ -55,6 +55,10 @@
 		}
 	}
 
+	&-outlined {
+		border: 1px solid $gray-5;
+	}
+
 	&-small {
 		height: 2.25rem;
 		padding: 0.625rem 1rem;
@@ -78,17 +82,9 @@
 		vertical-align: middle;
 		background-color: $white;
 
-		&:hover {
-			transform: rotate(-45deg) scale(1.2);
-		}
-
-		&:hover .icon {
-			transform: rotate(45deg);
-		}
-
 		&.btn-icon-small {
-			border-radius: $b-radius-2;
-			padding: 1rem 2rem;
+			border-radius: $b-radius-1;
+			padding: .5rem;
 			height: 30px;
 			width: 30px;
 		}

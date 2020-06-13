@@ -1,79 +1,54 @@
 .cart-item {
-    border-top: 1px solid $gray-4;
-    border-bottom: 1px solid $gray-4;
-    display: flex;
-
-    &:not(:first-child) {
-        margin-top: -1px;
-    }
-
-    &-thumbnail {
-        border-right: 1px solid $gray-4;
-        width: 10rem;
-        max-height: 15rem;
-        display: flex;
-        align-items: center;
-        padding: 2rem 1.5rem;
-
-        @include tablet {
-            padding: 2.5rem 2rem 1.5rem 2rem;
-            max-height: inherit;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            max-height: 8rem;
-            object-fit: contain;
-        }
-    }
+    margin-bottom: .25rem;
+    border-radius: $b-radius-3;
+    border: 1px solid $gray-5;
+    padding: 1rem 12px 1rem 1rem;
 
     &-info-wrapper {
         width: 100%;
         display: flex;
         flex-direction: column;
-
-        @include tablet {
-            justify-content: space-between;
-            flex-direction: row;
-        }
     }
 
-    &-info {
-        padding: 1.5rem;
-
-        @include tablet {
-            padding: 3rem 0 3rem 3rem;
-        }
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        color: $gray-1;
     }
 
     &-name {
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
     }
 
-    &-form {
-        display: flex;
-        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
-
-        @include tablet {
-            padding: 3rem;
-        }
+    &-city {
+        font-weight: $font-weight-medium;
     }
 
-    &-field {
-        display: flex;
-        align-items: center;
-        max-width: 7rem;
-        padding-right: 2rem;
+    &-price {
+        border-radius: $b-radius-2;
+        background-color: $light-secondary;
+        color: $primary;
+        padding: .5rem;
+        margin: 0;
+    }
 
-        .field-input {
-            text-align: center;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-info {
+        text-align: left;
+        color: $gray-3;
+
+        span {
+            font-weight: $font-weight-bold;
         }
     }
 
     .form-action-button {
-        display: flex;
-        align-items: center;
-        padding-left: 2rem;
+        margin-top: .5rem;
+        padding-left: 1rem;
     }
 }
