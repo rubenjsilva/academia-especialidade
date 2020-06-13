@@ -1,0 +1,64 @@
+.course-card {
+    position: relative;
+    border-radius: $b-radius-4;
+    margin-bottom: 1.5rem;
+
+    &.extended {
+        .course-card-upper {
+            min-height: 15rem;
+        }
+    }
+
+    &-upper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative;
+        background-color: $primary;
+        border-radius: $b-radius-4;
+        min-height: 11rem;
+        padding: 2rem;
+        z-index: 2;
+
+        .button-wrapper {
+            position: absolute;
+            bottom: -1.5rem;
+            right: 1.5rem;
+        }
+    }
+
+    &-content-wrapper {
+        button {
+            margin-top: .5rem;
+
+            &:last-child {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    &-down {
+        position: relative;
+        background-color: $light-secondary;
+        border-radius: $b-radius-4;
+        margin-top: -2rem;
+        padding: 2.5rem 2rem 1rem 2rem;
+        z-index: 1;
+    }
+
+    &-title {
+        color: $white;
+    }
+
+    &-price {
+        font-weight: $font-weight-regular;
+        color: $secondary;
+        margin-bottom: 0;
+    }
+
+    &-link-wrapper {
+        .arrow-link {
+            display: block;
+        }
+    }
+}

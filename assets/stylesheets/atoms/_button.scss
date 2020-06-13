@@ -1,5 +1,5 @@
 .btn {
-	@include transition(all, 0.4);
+	@include transition;
 	border-radius: $b-radius-3;
 	height: 3rem;
 	padding: 1rem 2rem;
@@ -11,7 +11,7 @@
 	text-decoration: none;
 
 	.icon {
-		@include transition(all, 0.4);
+		@include transition;
 		display: inline-block;
 		white-space: nowrap;
 		margin-left: 1rem;
@@ -36,6 +36,16 @@
 			border-color: darken($primary, 5%);
 		}
 	}
+
+	&-light {
+		background-color: rgba($white, .1);
+		color: $white;
+
+		&:hover {
+			background-color: rgba($white, .2);
+		}
+	}
+
 	&-danger {
 		background-color: $red;
 		color: $white;
@@ -62,31 +72,41 @@
 	}
 
 	&-icon {
-		padding-left: 15%;
-		padding-right: 10%;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		vertical-align: middle;
+		background-color: $white;
 
-		img {
-			max-width: 100%;
-			max-height: 100%;
+		&:hover {
+			transform: rotate(-45deg) scale(1.2);
+		}
 
-			&.icon {
-				position: absolute;
-				top: 50%;
-				left: 10%;
-				transform: translate(0, -50%);
+		&:hover .icon {
+			transform: rotate(45deg);
+		}
 
-				@include desktop {
-					left: 10%;
-				}
+		&.btn-icon-small {
+			border-radius: $b-radius-2;
+			padding: 1rem 2rem;
+			height: 30px;
+			width: 30px;
+		}
 
-				@include hd {
-					left: 15%;
-				}
+		&.btn-icon-large {
+			border-radius: $b-radius-4;
+			padding: 14px;
+			height: 54px;
+			width: 54px;
+		}
+		
+		&.btn-shadowed {
+			box-shadow: 0px 4px 20px rgba(32, 136, 160, 0.1);
+		}
 
-				@include resolution(1600px) {
-					left: 20%;
-				}
-			}
+
+		.icon {
+			@include transition;
 		}
 	}
 
@@ -94,14 +114,6 @@
 		justify-content: center;
 		width: 100%;
 	}
-
-	/* &:hover {
-		.arrow-right {
-			svg {
-				width: 100px;
-			}
-		}
-	}*/
 
 	&.full-width {
 		width: 100%;
@@ -122,10 +134,6 @@
 	pointer-events: none !important;
 }
 
-.under-btn {
-	text-transform: uppercase;
-	padding-bottom: 0.5rem;
-}
 
 
 .back-link-container {
@@ -167,8 +175,8 @@
 	}
 
 	&-lg {
-		width: 24px;
-		height: 24px;
+		width: 26px;
+		height: 26px;
 	}
 
 	&-white svg path {
@@ -178,6 +186,7 @@
 	&-primary svg path {
 		fill: $primary;
 	}
+
 	&-secondary svg path {
 		fill: $secondary;
 	}
