@@ -27,6 +27,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -90,8 +92,8 @@
             <div class="row">
               <div class="col">
                 <div class="tab-indicator">
-                  <h6 class="tab-page active">1. Informação</h6>
-                  <h6 class="tab-page">2. Pagamento</h6>
+                  <h6 class="tab-page">1. Informação</h6>
+                  <h6 class="tab-page active">2. Pagamento</h6>
                   <h6 class="tab-page">3. Confirmação</h6>
                 </div>
               </div>
@@ -99,52 +101,61 @@
 
             <div class="row">
               <div class="col-md-7">
-                <h4 class="checkout-headline">Dados de faturação</h4>
-                <form class="form personal-details-form">
+                <h4 class="checkout-headline">Método de pagamento</h4>
+                <form class="form payment-method-form">
                   <div class="row">
-                    <div class="col-6 field-group textfield">      
-                        <input type="text" id="name" name="name" autocomplete="on" required>
-                        <label for="name">Nome</label>
+                    <div class="col field-group">
+                      <label class="radio-container">
+                          <input type="radio" name="radio">
+                          <small class="radio-label">Referência Multibanco</small>
+                          <span class="checkmark"></span>
+                      </label>
+                      <label class="radio-container">
+                          <input type="radio" name="radio">
+                          <small class="radio-label">Pagar no ano comum</small>
+                          <span class="checkmark"></span>
+                      </label>
+                      <label class="radio-container">
+                          <input type="radio" name="radio">
+                          <small class="radio-label">Aderir ao Protocolo Santander</small>
+                          <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <h5>Minuta</h5>
+                      <small>Faz download da minuta, preenche-a devidamente e volta a submenter o ficheiro para validação.</small>
                     </div>
 
-                    <div class="col-6 field-group textfield">      
-                        <input type="text" id="lname" name="lname" autocomplete="on" required>
-                        <label for="lname">Apelido</label>
+                    <div class="col-12 button-wrapper mt-16">
+                      <button class="btn btn-secondary btn-small mr-16">
+                        Minuta presencial
+                        <span class="icon icon-sm icon-primary download">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.3327 7C10.6164 7 10.6661 7.54218 10.6661 7.79988V9.99954C10.6661 10.2572 10.2544 10.6661 9.99953 10.6661H2.00079C1.74592 10.6661 1.33423 10.2572 1.33423 9.99954V7.79988C1.33423 7.54218 1.33423 7 0.667662 7C0.00109863 7 0.00109863 7.54218 0.00109863 7.79988V10.5994C0.00109863 11.3725 0.620915 11.9992 1.3855 11.9992H10.6148C11.3794 11.9992 11.9992 11.3725 11.9992 10.5994V7.79988C11.9992 7.54218 12.049 7 11.3327 7Z" fill="#2C7D98"/>
+                            <path d="M9.79567 5.01138C9.53687 4.77027 9.12659 4.77027 8.86782 5.01138L6.66735 7.13288V0.645243C6.66735 0.289418 6.36836 0.000976562 5.99952 0.000976562C5.63068 0.000976562 5.33169 0.289418 5.33169 0.645243V7.13292L3.13255 5.01138C2.86725 4.7642 2.44449 4.77129 2.18827 5.02719C1.9383 5.27687 1.9383 5.67267 2.18827 5.92234L5.52734 9.1436C5.78783 9.3955 6.21067 9.39603 6.47178 9.14477L6.47299 9.1436L9.81207 5.92234C10.0683 5.6664 10.061 5.25856 9.79567 5.01138Z" fill="#2C7D98"/>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <button class="btn btn-secondary btn-small">
+                        Minuta online
+                        <span class="icon icon-sm icon-primary download">
+                          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.3327 7C10.6164 7 10.6661 7.54218 10.6661 7.79988V9.99954C10.6661 10.2572 10.2544 10.6661 9.99953 10.6661H2.00079C1.74592 10.6661 1.33423 10.2572 1.33423 9.99954V7.79988C1.33423 7.54218 1.33423 7 0.667662 7C0.00109863 7 0.00109863 7.54218 0.00109863 7.79988V10.5994C0.00109863 11.3725 0.620915 11.9992 1.3855 11.9992H10.6148C11.3794 11.9992 11.9992 11.3725 11.9992 10.5994V7.79988C11.9992 7.54218 12.049 7 11.3327 7Z" fill="#2C7D98"/>
+                            <path d="M9.79567 5.01138C9.53687 4.77027 9.12659 4.77027 8.86782 5.01138L6.66735 7.13288V0.645243C6.66735 0.289418 6.36836 0.000976562 5.99952 0.000976562C5.63068 0.000976562 5.33169 0.289418 5.33169 0.645243V7.13292L3.13255 5.01138C2.86725 4.7642 2.44449 4.77129 2.18827 5.02719C1.9383 5.27687 1.9383 5.67267 2.18827 5.92234L5.52734 9.1436C5.78783 9.3955 6.21067 9.39603 6.47178 9.14477L6.47299 9.1436L9.81207 5.92234C10.0683 5.6664 10.061 5.25856 9.79567 5.01138Z" fill="#2C7D98"/>
+                          </svg>
+                        </span>
+                      </button>
                     </div>
 
-                    <div class="col-6 field-group textfield">      
-                      <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="on" required>
-                      <label for="phone">Nº de telemóvel</label>
-                    </div>
-                  
-                    <div class="col-6 field-group textfield">      
-                        <input type="text" id="email" name="email" autocomplete="on" autocomplete="on" required>
-                        <label for="email">Email</label>
-                    </div>
-
-                    <div class="col-12 field-group textfield">      
-                        <input type="number" id="nif" name="nif" inputmode="numeric" required>
-                        <label for="nif">NIF</label>
-                    </div>
-
-                    <div class="col-12 field-group textfield mt-16">      
-                        <input type="text" id="address" name="address" autocomplete="on" required>
-                        <label for="address">Morada</label>
-                    </div>
-
-                    <div class="col-4 field-group textfield">      
-                        <input type="text" id="city" name="city" required>
-                        <label for="city">Localidade</label>
-                    </div>
-
-                    <div class="col-4 field-group textfield">      
-                        <input type="text" id="zip" name="zip" inputmode="numeric" autocomplete="on" required>
-                        <label for="zip">Código postal</label>
-                    </div>
-
-                    <div class="col-4 field-group textfield">      
-                        <input type="text" id="country" name="country" autocomplete="on" required>
-                        <label for="country">País</label>
+                    <div class="col-12">
+                      <div class="file-drop-area">
+                        <small class="file-msg">Submete o ficheiro aqui.<br>Deve estar no formato PDF ou JPEG.</small>
+                        <input class="file-input" type="file">
+                      </div>
                     </div>
                   </div>
 
@@ -153,8 +164,8 @@
                       <a href="carrinho.html" class="arrow-link arrow-link-primary">Voltar ao carrinho</a>
 
                       <!-- This <a> SHOULD be a <button>, I'm just using an <a> to navigate to checkout page easily -->
-                      <a class="btn btn-primary" href="checkout-payment.html">
-                        Pagamento
+                      <a class="btn btn-primary" href="checkout-confirmation.html">
+                        Confirmação
                         <span class="icon icon-md icon-white arrow-right">
                           <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7984 8.52458C17.788 8.53696 17.7846 8.55219 17.7742 8.56362L13.5902 11.7772C13.3194 12.0743 12.8816 12.0743 12.6108 11.7772C12.3409 11.4829 12.3409 11.0039 12.6108 10.7087L14.4623 8.73217H0.66186C0.29589 8.73217 0 8.40554 0 8.00274C0 7.60088 0.29589 7.27426 0.66186 7.27426H14.4683L12.6108 5.29008C12.3409 4.99488 12.3409 4.51589 12.6108 4.22069C12.8816 3.92644 13.3194 3.92644 13.5902 4.22069L17.7742 7.43519C17.8045 7.46757 17.8183 7.50851 17.8417 7.54565C17.936 7.67135 18 7.82657 18 8.00274C18 8.20843 17.9221 8.39221 17.7984 8.52458Z" fill="white"/>
@@ -244,5 +255,6 @@
       </footer>
     </main>
 
+    <script src="assets/js/file-input.js"></script>
   </body>
 </html>
