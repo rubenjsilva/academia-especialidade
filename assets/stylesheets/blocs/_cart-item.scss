@@ -42,6 +42,11 @@
         text-align: left;
         color: $gray-3;
 
+        small {
+            display: block;
+            margin-bottom: .25rem;
+        }
+
         span {
             font-weight: $font-weight-bold;
         }
