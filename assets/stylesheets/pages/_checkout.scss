@@ -22,3 +22,47 @@
         color: $gray-1;
     }
 }
+
+
+/*
+--------------------------------------------------------------------------------
+Confirmation Step
+--------------------------------------------------------------------------------
+*/
+
+.order-details-wrapper {
+    margin-bottom: 3rem;
+
+    .order-details-surtitle {
+        color: $gray-3;
+    }
+
+    .order-details-personal-wrapper, .order-details-payment-wrapper {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .order-details-payment-method {
+        margin-bottom: 1rem;
+    }
+
+    .reference-method-wrapper {
+        .labels-col {
+            min-width: 8rem;
+        }
+
+        .values-col {
+            p {
+                font-weight: $font-weight-medium;
+            }
+        }
+    }
+
+    .protocol-method-wrapper {
+        .file-name {
+            overflow-wrap: break-word;
+            color: $gray-2;
+        }
+    }
+}
