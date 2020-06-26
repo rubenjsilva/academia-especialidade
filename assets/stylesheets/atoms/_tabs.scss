@@ -1,0 +1,52 @@
+/* Style the tab */
+.tabs {
+    overflow: hidden;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+
+    .tablinks {
+        @include transition;
+        cursor: pointer;
+        color: $light-primary;
+        float: left;
+        padding: 1rem .85rem;
+        border-radius: $b-radius-3;
+
+        h5 {
+            margin: 0;
+        }
+
+        &:hover {
+            background-color: lighten($light-secondary, 3%);
+        }
+
+        &.active {
+            background-color: $light-secondary;
+            color: $primary;
+        }
+    }
+}
+
+.tabcontent {
+    display: none;
+    animation: fadeEffect 1s; 
+
+    .tabcontent-header {
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+            margin-left: .75rem;
+        }
+    }
+
+    .title-startdate {
+        color: $dark-green;
+    }
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
