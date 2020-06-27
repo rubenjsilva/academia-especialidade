@@ -7,22 +7,23 @@
     .tablinks {
         @include transition;
         cursor: pointer;
-        color: $light-primary;
+        color: $primary;
         float: left;
         padding: 1rem .85rem;
         border-radius: $b-radius-3;
+        opacity: .5;
 
         h5 {
             margin: 0;
         }
 
         &:hover {
-            background-color: lighten($light-secondary, 3%);
+            opacity: .7;
         }
 
         &.active {
             background-color: $light-secondary;
-            color: $primary;
+            opacity: 1;
         }
     }
 }
