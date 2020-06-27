@@ -1,0 +1,58 @@
+.classes-main-content {
+    .classes-wrapper {
+
+        .class-wrapper {
+            display: flex;
+            border-radius: $b-radius-4;
+            border: 1px solid $light-secondary;
+            padding: .75rem;
+            margin-bottom: .5rem;
+        
+            .class-date-container {
+                background-color: $light-secondary;
+                border-radius: $b-radius-3;
+                color: $primary;
+                width: 4.5rem;
+                padding: 14px 1.5rem;
+
+                .class-date-day {
+                    margin-bottom: -.25rem;
+                    font-weight: 700;
+                }
+
+                .class-date-month {
+                    text-transform: uppercase;
+                }
+            }
+
+            .class-description-container {
+                margin-left: 1rem;
+                margin-right: 1rem;
+
+                .class-subject {
+                    margin-bottom: .5rem;
+                    display: block;
+                }
+
+                .class-time {
+                    color: $primary;
+                    font-weight: 500;
+                    display: block;
+                }
+            }
+
+            .class-number-container {
+                padding-left: 1rem;
+                border-left: 1px solid $light-secondary;
+                width: 6rem;
+                min-width: 6rem;
+                margin-left: auto;
+
+                .class-number {
+                    text-transform: uppercase;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

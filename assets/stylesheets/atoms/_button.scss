@@ -28,12 +28,11 @@
 	}
 
 	&-secondary {
-		background-color: $white;
+		background-color: $light-secondary;
 		color: $primary;
-		border: 2px solid $primary;
 
 		&:hover {
-			border-color: darken($primary, 5%);
+			background-color: darken($light-secondary, 5%);
 		}
 	}
 
@@ -132,29 +131,13 @@
 
 
 
-.back-link-container {
-	@include transition;
-	padding: 2.5rem 1.5rem;
-	background-color: $white;
-	height: $navbar-height-sm;
-	position: fixed;
-	top: 0;
-	left: $navbar-height-sm*3;
-	z-index: 9;
+.back-link {
+	color: $primary;
+	text-transform: uppercase;
 
-	@include tablet{
-		left: $navbar-height*3;
-		height: $navbar-height;
-		padding: 3.5rem 2.5rem;
-	}
-
-	.back-link {
-		color: $dark;
-		text-transform: uppercase;
-
-		&-arrow {
-			margin-right: 1rem;
-		}
+	&-arrow {
+		margin-right: .5rem;
+		transform: rotate(-180deg);
 	}
 }
 
