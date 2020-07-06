@@ -93,8 +93,6 @@
 }
 
 
-
-
 /* IE 9 is rounding up the calc it seems */
 .ie9 .fc-calendar .fc-row > div,
 .ie9 .fc-calendar .fc-head > h6 {
@@ -142,7 +140,6 @@
 /*------------- CALENDAR HEADER -------------*/
 
 .calendar-wrapper {
-    height: 100%;
     display: block;
     position: relative;
 }

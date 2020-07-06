@@ -1,29 +1,70 @@
 /* Style the tab */
 .tabs {
     overflow: hidden;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: left;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 4rem 0 1rem 0;
+
+    .tabs-container {
+        padding-right: $margin-sm;
+        padding-left: $margin-sm;
+        max-width: $container-max-width;
+
+        @include tablet {
+            padding-right: $margin-md;
+            padding-left: $margin-md;
+        }
+
+        @include resolution (1400px) { 
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    &:after {
+        content: '';
+        height: 1px;
+        background-color: $light-secondary;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
 
     .tablinks {
         @include transition;
         cursor: pointer;
         color: $primary;
-        float: left;
-        padding: 1rem .85rem;
-        border-radius: $b-radius-3;
+        display: inline-block;
         opacity: .5;
-
-        h5 {
-            margin: 0;
-        }
+        margin-bottom: -1px;
+        z-index: 1;
 
         &:hover {
             opacity: .7;
         }
 
         &.active {
-            background-color: $light-secondary;
             opacity: 1;
+
+            .tablink {
+                border: 1px solid $light-secondary;
+                border-bottom: 1px solid $white;
+            }
+        }
+
+        .tablink {
+            padding: 1rem;
+            border-top-left-radius: $b-radius-3;
+            border-top-right-radius: $b-radius-3;
+            background-color: $white;
+            margin: 0;
+            display: block;
         }
     }
 }
@@ -31,14 +72,33 @@
 .tabcontent {
     display: none;
     animation: fadeEffect 1s; 
+    padding-top: 2rem;
 
     .tabcontent-header {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
 
-        .btn {
-            margin-left: .75rem;
+        @include desktop {
+            flex-direction: row;
         }
+
+        .actions-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+
+            .btn {
+                margin-bottom: 1rem;
+
+                &:not(:last-child) {
+                    margin-right: .75rem;
+                }
+            }
+        }
+    }
+
+    .tabcontent-body {
+        margin-top: 2rem;
     }
 
     .title-startdate {

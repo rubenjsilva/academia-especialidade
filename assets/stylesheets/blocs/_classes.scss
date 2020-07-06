@@ -1,19 +1,32 @@
 .classes-main-content {
-    .classes-wrapper {
+    margin-bottom: 6rem;
 
+    .classes-wrapper {
         .class-wrapper {
             display: flex;
             border-radius: $b-radius-4;
             border: 1px solid $light-secondary;
-            padding: .75rem;
             margin-bottom: .5rem;
+            padding: .5rem;
+
+            @include tablet {
+                padding: .75rem;
+            }
         
             .class-date-container {
                 background-color: $light-secondary;
                 border-radius: $b-radius-3;
                 color: $primary;
-                width: 4.5rem;
-                padding: 14px 1.5rem;
+                min-width: 3.5rem;
+                height: 3.5rem;
+                padding: .5rem;
+                text-align: center;
+
+                @include tablet {
+                    min-width: 4.5rem;
+                    height: 4.5rem;
+                    padding: 14px 1.5rem;
+                }
 
                 .class-date-day {
                     margin-bottom: -.25rem;
@@ -42,11 +55,16 @@
             }
 
             .class-number-container {
-                padding-left: 1rem;
-                border-left: 1px solid $light-secondary;
-                width: 6rem;
-                min-width: 6rem;
-                margin-left: auto;
+                display: none;
+
+                @include tablet {
+                    border-left: 1px solid $light-secondary;
+                    display: block;
+                    width: 6rem;
+                    min-width: 6rem;
+                    margin-left: auto;
+                    padding-left: 1rem;
+                }
 
                 .class-number {
                     text-transform: uppercase;

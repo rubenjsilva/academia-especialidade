@@ -1,0 +1,15 @@
+.recommended-section {
+    .recommended-header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    .actions-wrapper {
+        min-width: 15.5rem;
+    }
+}

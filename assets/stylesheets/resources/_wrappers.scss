@@ -9,6 +9,11 @@
     padding-left: $margin-md;
   }
 
+  @include desktop {
+    padding-right: $margin-lg;
+    padding-left: $margin-lg;
+  }
+
   @include resolution (1400px) { 
     margin-left: auto;
     margin-right: auto;
@@ -17,8 +22,8 @@
 
 .gen-wrapper {
   @include desktop {
-    padding-right: $margin-lg;
-    padding-left: $margin-lg;
+    padding-right: $margin-xl;
+    padding-left: $margin-xl;
   }
 }
 
