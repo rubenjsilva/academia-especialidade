@@ -15,13 +15,13 @@ $font-size-baseline: 1rem; /* 16px */
 $font-size-sm: $font-size-baseline * 0.875; /* 14px */
 $font-size-xs: $font-size-baseline * 0.75; /* 12px */
 
-$h1-font-size-sm: $font-size-baseline * 3; /* 48px */
-$h2-font-size-sm: $font-size-baseline * 2.25; /* 36px */
-$h3-font-size-sm: $font-size-baseline * 2; /* 32px */
-$h4-font-size-sm: $font-size-baseline * 1.5; /* 24px */
+$h1-font-size-sm: $font-size-baseline * 2.5; /* 40px */
+$h2-font-size-sm: $font-size-baseline * 1.875; /* 30px */
+$h3-font-size-sm: $font-size-baseline * 1.625; /* 26px */
+$h4-font-size-sm: $font-size-baseline * 1.25; /* 24px */
 $h5-font-size-sm: $font-size-baseline * 1; /* 16px */
-$h6-font-size-sm: $font-size-baseline * 0.75; /* 13px */
-$btn-font-size-sm: $font-size-xs; /* 12px */
+$h6-font-size-sm: $font-size-baseline * 0.75; /* 12px */
+$btn-font-size-sm: $font-size-baseline * .625; /* 10px */
 
 
 $h1-font-size: $font-size-baseline * 3; /* 48px */
@@ -29,7 +29,7 @@ $h2-font-size: $font-size-baseline * 2.25; /* 36px */
 $h3-font-size: $font-size-baseline * 2; /* 32px */
 $h4-font-size: $font-size-baseline * 1.5; /* 24px */
 $h5-font-size: $font-size-baseline * 1; /* 16px */
-$h6-font-size: $font-size-baseline * 0.75; /* 13px */
+$h6-font-size: $font-size-baseline * 0.75; /* 12px */
 $btn-font-size: $font-size-xs; /* 12px */
 
 
@@ -54,6 +54,9 @@ VARIABLES
 $gray-border: 1px solid $gray-4;
 $light-border: 1px solid $gray-2;
 
+$background-orange: rgba($orange, .3);
+$background-light-secondary: rgba($light-secondary, .5);
+
 /*
 --------------------------------------------------------------------------------
 Border-radius
@@ -65,6 +68,7 @@ $b-radius-2: 14px;
 $b-radius-3: 18px;
 $b-radius-4: 22px;
 $b-radius-5: 40px;
+$b-radius-5-sm: 28px;
 
 /*
 --------------------------------------------------------------------------------
@@ -72,6 +76,7 @@ CONTAINER
 --------------------------------------------------------------------------------
 */
 $container-max-width: 1400px;
-$margin-sm: 2rem;
-$margin-md: 4.5rem;
-$margin-lg: 9rem;
+$margin-sm: 1rem;
+$margin-md: 2rem;
+$margin-lg: 4rem;
+$margin-xl: 9rem;

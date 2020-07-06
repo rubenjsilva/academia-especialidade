@@ -95,13 +95,9 @@ h6 {
 }
 
 p {
-  font-size: $font-size-sm;
+  font-size: $font-size-baseline;
   line-height: 150%;
   margin-bottom: .5rem;
-
-  @include tablet {
-    font-size: $font-size-baseline;
-  }
 }
 
 span {

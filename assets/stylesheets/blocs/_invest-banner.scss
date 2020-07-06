@@ -1,0 +1,45 @@
+.invest-banner {
+    width: 100%;
+    background: linear-gradient(180deg, rgba($orange, .35) 63.04%, rgba(255, 231, 202, 0) 101.56%);
+    border-radius: 100px 0px 0px 0px;
+    border-bottom: 2.5rem solid rgba($orange, .15);
+    padding: 7rem 1rem 10rem 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    @include desktop {
+        padding: 7rem 9rem 4rem 9rem;
+        border-radius: 250px 0px 0px 0px;
+    }
+
+    .banner-title, .banner-text {
+        color: $primary;
+        text-align: center;
+    }
+
+    .banner-text {
+        font-weight: $font-weight-medium;
+    }
+
+    .clock-illustration {
+        position: absolute;
+        bottom: -4px;
+        left: -5rem;
+
+        @include desktop {
+            left: 3rem;
+        }
+    }
+
+    .shapes-illustration {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+
+        @include desktop {
+            right: 3rem;
+        }
+    }
+}

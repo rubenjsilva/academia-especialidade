@@ -35,7 +35,7 @@
          ...
          }
          */
-        weeks : [ 'Dom', 'Seg', 'Ter', 'Quar', 'Qui', 'Sex', 'Sáb' ],
+        weeks : [ 'Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb' ],
         weekabbrs : [ 'D', 'S', 'T', 'Q', 'Q', 'S', 'S' ],
         months : [ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro' ],
         monthabbrs : [ 'Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez' ],

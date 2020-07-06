@@ -1,0 +1,42 @@
+.general-info-card, .institution-info-card {
+    border-radius: $b-radius-5-sm;
+    height: 100%;
+    padding: 1.5rem 1rem;
+
+    @include tablet {
+        border-radius: $b-radius-5;
+    }
+}
+
+.general-info-card {
+    background-color: $background-light-secondary;
+    color: $dark-green;
+
+    @include tablet {
+        padding: 2rem 4rem 4rem 4rem;
+    }
+}
+
+.institution-info-card {
+    background-color: $background-orange;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include tablet {
+        padding: 2rem;
+    }
+
+    .institution-name, .institution-contacts, small {
+        color: $primary;
+    }
+
+    small {
+        display: block;
+        word-break: break-word;
+
+        &.email {
+            word-break: break-all;
+        }
+    }
+}
