@@ -5,6 +5,16 @@ var swiper = new Swiper('.swiper-container', {
     grabCursor: true,
     loop: true,
     loopFillGroupWithBlank: true,
+    breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+      },
     pagination: {
         el: '.swiper-pagination',
         dynamicBullets: true,

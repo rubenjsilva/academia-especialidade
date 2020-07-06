@@ -67,8 +67,16 @@
     margin-top: 8rem;
     margin-bottom: 8rem;
 
-    .faq-illustration {
-        margin-left: -2rem;
+    img {
+        @include tablet-down {
+            height: auto;
+        }
+
+        &.faq-illustration {
+            @include tablet {
+                margin-left: -2rem;
+            }
+        }
     }
 }
 
