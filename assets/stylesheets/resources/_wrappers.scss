@@ -9,14 +9,16 @@
     padding-left: $margin-md;
   }
 
-  @include desktop {
-    padding-right: $margin-lg;
-    padding-left: $margin-lg;
-  }
-
   @include resolution (1400px) { 
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.md-wrapper {
+   @include desktop {
+    padding-right: $margin-lg;
+    padding-left: $margin-lg;
   }
 }
 

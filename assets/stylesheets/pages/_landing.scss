@@ -5,10 +5,33 @@
         right: 0;
         height: 100%;
         z-index: -1;
+
+        &.landing-illustration-sm {
+            bottom: -2rem;
+            top: auto;
+            height: 80%;
+
+            @include tablet {
+                height: 90%;
+                bottom: 0rem;
+            }
+        }
     }
 
     .content-container {
         height: 100%;
+        
+        @include desktop-down {
+            padding-top: 9rem;
+        }
+
+        @include tablet-down {
+            padding-top: 7rem;
+        }
+
+        @include desktop {
+            align-items: center;
+        }
     }
 }
 
@@ -57,10 +80,22 @@
 
 .santander-wrapper {
     margin-top: 12rem;
+
+    .information-container {
+        @include tablet-down {
+            text-align: center;
+        }
+    }
 }
 
 .testimonials-wrapper {
     margin-top: 8rem;
+
+    .section-title {
+        @include tablet-down {
+            text-align: center;
+        }
+    }
 }
 
 .faq-wrapper {
@@ -81,9 +116,29 @@
 }
 
 
-
 .ilu-bg {
     img {
         pointer-events: none;
+    }
+
+    @include tablet-down {
+        margin-bottom: 2rem;
+    }
+
+    &.landing-illustration {
+        display: none;
+
+        @include desktop {
+            display: block;
+        }
+
+        &-sm {
+            pointer-events: none;
+            display: block;
+
+            @include desktop {
+                display: none;
+            }
+        }
     }
 }

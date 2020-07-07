@@ -1,9 +1,24 @@
 .card-links {
-    margin-top: -10rem;
+    margin-top: -6rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+
+    @include tablet {
+        margin-top: -10rem;
+    }
 }
 
 .card-link-wrapper {
-    width: 31.33%;
+    width: 100%;
+    margin-bottom: .25rem;
+    
+    @include tablet {
+        width: 32.33%;
+    }
+
+    @include desktop {
+        width: 31.33%;
+    }
 
     &:first-child {
         margin-right: 1%;
@@ -14,29 +29,95 @@
     }
 
     .card-link-container {
-        padding: 3rem 2rem 2.5rem 2rem;
+        padding: .75rem .75rem .75rem 1rem;
         display: flex;
-        align-items: center;
         flex-direction: column;
+        justify-content: space-between;
         position: relative;
         background-color: $white;
-        border-radius: $b-radius-4;
+        border-radius: $b-radius-3;
+        height: 100%;
+
+        @include tablet {
+            align-items: center;
+            padding: 3rem 2rem 2.5rem 2rem;
+            border-radius: $b-radius-4;
+        }
 
         &:after {
             content: '';
             background-color: $white;
             box-shadow: 0px 4px 50px rgba(32, 136, 160, 0.08);
-            border-radius: $b-radius-4;
+            border-radius: $b-radius-3;
             width: 100%;
             height: 100%;
             z-index: -1;
             position: absolute;
             top: 0;
             left: 0;
+
+            @include tablet {
+                border-radius: $b-radius-4;
+            }
+        }
+
+        .new-tag {
+            background-color: $secondary;
+            border-radius: $b-radius-1;
+            color: $white;
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: .25rem .5rem;
+
+            @include tablet-down {
+                top: 50%;
+                left: 1rem;
+                transform: translate(0, -50%);
+            }
         }
 
         .card-title {
-            margin-bottom: 2rem;
+            margin-bottom: 0;
+
+            @include tablet {
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+
+            @include desktop {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .arrow-link {
+            display: none;
+
+            @include tablet {
+                display: block;
+            }
+        }
+
+        .btn-icon {
+            display: inline;
+            position: absolute;
+            right: .5rem;
+            top: .5rem;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &.new-card {
+            .card-title {
+                @include tablet-down {
+                    margin-left: 4rem;
+                }
+            }
         }
     }
 }
