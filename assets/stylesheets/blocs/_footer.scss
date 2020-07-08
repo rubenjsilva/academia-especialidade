@@ -12,6 +12,22 @@
         font-weight: $font-size-xs;
     }
 
+    .sitemap-wrapper {
+        margin-bottom: 3rem;
+        margin-top: 3rem;
+
+        @include tablet {
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+        }
+    }
+
+    .media-links-wrapper {
+        @include tablet-down {
+            margin-bottom: 1.5rem;
+        }
+    }
+
     .rights-wrapper{
         padding: 1rem;
         border-top: 1px solid $gray-5;

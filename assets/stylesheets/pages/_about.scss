@@ -1,0 +1,49 @@
+.about-wrapper {
+    .ilu-bg {
+        position: absolute;
+        bottom: 0;
+        top: initial;
+        right: 0;
+        height: 60%;
+        z-index: -1;
+
+        @include tablet {
+            height: 80%;
+        }
+
+        @include tablet {
+            height: 100%;
+        }
+    }
+
+    .content-container {
+        height: 100%;
+        
+        @include desktop-down {
+            padding-top: 9rem;
+        }
+
+        @include tablet-down {
+            padding-top: 7rem;
+        }
+
+        @include desktop {
+            align-items: center;
+        }
+    }
+}
+
+.motivation-wrapper {
+    background-color: rgba($light-primary, .35);
+    padding: 4rem 0 6rem 0;
+}
+
+.method-wrapper {
+    img {
+        width: 100%;
+
+        @include tablet-down {
+            margin-bottom: 3rem;
+        }
+    }
+}

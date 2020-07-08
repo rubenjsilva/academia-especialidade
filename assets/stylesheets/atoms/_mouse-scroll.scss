@@ -1,0 +1,55 @@
+.mouse-icon {
+    cursor: default;
+    width: 18px;
+    height: 30px;
+    border: 2px solid $primary;
+    border-radius: 9px;
+    position: absolute;
+    left: 10px;
+    bottom: 2rem;
+    z-index: 10;
+    opacity: .4;
+
+    .scroll-helper {
+        position: absolute;
+        left: 2rem;
+        color: $primary;
+        font-size: $font-size-xs;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-top: .5rem;
+    }
+
+    .wheel {
+        width: 2px;
+        height: 8px;
+        border-radius: 1px;
+        background-color: transparent;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            width: 2px;
+            height: 8px;
+            border-radius: 1px;
+            background-color: $primary;
+            position: absolute;
+            top: -10px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            -webkit-animation: wheel-move 1.5s infinite;
+            animation: wheel-move 1.5s infinite;
+        }
+    }
+}
+
+@-webkit-keyframes wheel-move{
+    from { top: -10px; }
+    to { top:12px; }
+}
