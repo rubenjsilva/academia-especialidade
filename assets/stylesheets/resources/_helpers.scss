@@ -118,3 +118,26 @@ Opacity
 .o-70 { opacity: .7; }
 .o-80 { opacity: .8; }
 .o-90 { opacity: .9; }
+
+/*
+--------------------------------------------------------------------------------
+Order Switcher
+--------------------------------------------------------------------------------
+*/
+@include tablet-down {
+  .switcher-top {
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+      -webkit-order: 2;
+      order: 2;
+  }
+
+  .switcher-bottom {
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1;
+  }
+}

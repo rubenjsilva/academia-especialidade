@@ -1,18 +1,57 @@
 .swiper-container {
     width: 100%;
     min-height: 450px;
+    padding: 1rem;
+
+    @include tablet {
+        padding: 0;
+    }
 
     .swiper-slide {
         position: relative;
 
         .testimonial-background {
+            @include tablet-down {
+                border-radius: $b-radius-5-sm;
+                background-color: rgba($secondary, .3);
+                width: 100%;
+                height: 90%;
+            }
+
             position: absolute;
             top: 0;
             right: 0;
-            z-index: 0;
+            z-index: -1;
 
-            svg path {
-                fill: $secondary;
+
+            svg {
+                display: none;
+
+                @include tablet {
+                    display: block;
+                }
+
+                path {
+                    fill: $secondary;
+                }
+            }
+        }
+
+        &.odd {
+            .avatar-container {
+                &:before {
+                    background: linear-gradient(180deg, $orange 0%, #F5BF7D 100%);
+                }
+            }
+
+            .testimonial-background {
+                @include tablet-down {
+                    background-color: rgba($orange, .3);
+                }
+
+                svg path {
+                    fill: $orange;
+                }
             }
         }
     }
@@ -32,32 +71,29 @@
 
 .testimonial-container {
     display: flex;
-    padding: 4rem 3rem 4rem 0;
+    padding: 2rem 1rem 2rem 0;
+
+    @include tablet {
+        padding: 4rem 3rem 4rem 0;
+    }
 
     .avatar-container {
         border-bottom-left-radius: $b-radius-5;
         border-bottom-right-radius: $b-radius-5;
-        margin-top: -3rem;
-        width: 10rem;
-        min-width: 10rem;
-        height: 14rem;
+        margin-top: 0;
+        min-width: 5rem;
+        height: 8rem;
         position: relative;
         z-index: 1;
 
-        img {
-            z-index: 1;
+        @include tablet {
+            min-width: 10rem;
+            height: 14rem;
+            margin-top: -3rem;
         }
 
-        &:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 11rem;
-            background: linear-gradient(180deg, $secondary 0%, #7FBBCA 100%);
-            border-radius: $b-radius-5;
-            z-index: -1;
+        img {
+            z-index: 1;
         }
     }
 
@@ -78,18 +114,3 @@
         }
     }
 }
-
-.swiper-slide.odd {
-    .avatar-container {
-        &:before {
-            background: linear-gradient(180deg, $orange 0%, #F5BF7D 100%);
-        }
-    }
-
-    .testimonial-background {
-        svg path {
-            fill: $orange;
-        }
-    }
-}
-
