@@ -1,4 +1,8 @@
-/* Style the tab */
+/*
+--------------------------------------------------------------------------------
+Course Tabs
+--------------------------------------------------------------------------------
+*/
 .tabs {
     overflow: hidden;
     position: relative;
@@ -110,4 +114,77 @@
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+
+/*
+--------------------------------------------------------------------------------
+Formation Cities Tabs
+--------------------------------------------------------------------------------
+*/
+
+.cl-toggle {
+    .cl-tabs {
+        cursor: pointer;
+
+        @include tablet-down {
+            display: flex;
+            overflow-y: auto;
+
+            .cl-tab {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .cl-tab {
+        margin-bottom: 1.5rem;
+
+        &.active {
+            @include transition;
+            color: $primary;
+            font-weight: 600;
+        }
+    }
+
+    .cl-panels {
+        .cl-panel {
+            display: none;
+            background: rgba($orange, .3);
+            border-radius: $b-radius-5;
+            padding: 4rem;
+
+            @include tablet-down {
+                padding: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            &:first-child {
+                display: block;
+            }
+
+            img {
+                @extend .mx-auto;
+                display: block;
+                margin-top: -7rem;
+                margin-bottom: 3rem;
+
+                @include tablet-down {
+                    margin-top: -4rem;
+                }
+            }
+
+            .institution-name {
+                color: $primary;
+
+                &:not(:last-child) {
+                    margin-bottom: 1.5rem;
+                }
+
+                .slim {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
 }
