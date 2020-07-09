@@ -1,0 +1,83 @@
+.santander-page-wrapper {
+    .content-container {
+        height: 100%;
+
+        @include desktop-down {
+            padding-top: 9rem;
+        }
+
+        @include tablet-down {
+            padding-top: 7rem;
+        }
+
+        @include desktop {
+            align-items: center;
+        }
+    }
+
+    .illu-bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 50%;
+        z-index: -1;
+
+        @include tablet {
+            height: 60%;
+            bottom: 2rem;
+        }
+
+        @include desktop {
+            right: 4rem;
+            height: 90%;
+        }
+    }
+}
+
+.santander-info-wrapper {
+    .santander-content-wrapper {
+        @include desktop {
+            margin-left: -2rem;
+        }
+
+        .list-title {
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .listicles {
+            .listicle-text {
+                margin-bottom: 2rem;
+                padding-left: 1rem;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    background: #4F4F4F;
+                    border-radius: 2px;
+                    width: 6px;
+                    height: 6px;
+                    position: absolute;
+                    left: 0;
+                    top: .5rem;
+                }
+            }
+        }
+
+        .steps-list {
+            h6 {
+                margin-bottom: 1rem;
+            }
+
+            .steps-text {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .santader-contacts {
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
