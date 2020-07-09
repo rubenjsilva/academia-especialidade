@@ -45,28 +45,6 @@
             text-align: center;
             margin-bottom: 5rem;
 
-            .badge-wrapper {
-                width: 4rem;
-                height: 4rem;
-                margin-bottom: 1.5rem;
-                position: relative;
-
-                .badge-background {
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 100%;
-                    background-color: $orange;
-                }
-
-
-                img {
-                    width: 3.5rem;
-                    position: absolute;
-                    right: -1rem;
-                    top: 0;
-                }
-            }
-
             .listing-title {
                 @extend .mb-24;
             }
@@ -77,6 +55,29 @@
         }
     }
 }
+
+
+.badge-wrapper {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    .badge-background {
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        background-color: $orange;
+    }
+
+    img {
+        width: 3.5rem;
+        position: absolute;
+        right: -1rem;
+        top: 0;
+    }
+}
+
 
 .santander-wrapper {
     margin-top: 12rem;
