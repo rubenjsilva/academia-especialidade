@@ -23,7 +23,7 @@
     }
 
     .media-links-wrapper {
-        @include tablet-down {
+        @include desktop-down {
             margin-bottom: 1.5rem;
         }
     }
