@@ -47,3 +47,43 @@
         }
     }
 }
+
+.formation-wrapper {
+    .cl-panels {
+        .cl-panel {
+            .about-panel-content {
+                background: rgba($orange, .3);
+                border-radius: $b-radius-5;
+                padding: 4rem;
+
+                @include tablet-down {
+                    padding: 1.5rem;
+                    margin-top: 2rem;
+                }
+
+                img {
+                    @extend .mx-auto;
+                    display: block;
+                    margin-top: -7rem;
+                    margin-bottom: 3rem;
+
+                    @include tablet-down {
+                        margin-top: -4rem;
+                    }
+                }
+
+                .institution-name {
+                    color: $primary;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .slim {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

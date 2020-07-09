@@ -119,13 +119,27 @@ Course Tabs
 
 /*
 --------------------------------------------------------------------------------
-Formation Cities Tabs
+Formation Cities Tabs - General
 --------------------------------------------------------------------------------
 */
 
 .cl-toggle {
     .cl-tabs {
-        cursor: pointer;
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 3rem;
+            z-index: 4;
+
+            @include desktop-down {
+                display: flex;
+                overflow-y: auto;
+
+                .cl-tab {
+                    margin-right: 1rem;
+                }
+            }
+        }
 
         @include tablet-down {
             display: flex;
@@ -138,6 +152,7 @@ Formation Cities Tabs
     }
 
     .cl-tab {
+        cursor: pointer;
         margin-bottom: 1.5rem;
 
         &.active {
@@ -150,40 +165,9 @@ Formation Cities Tabs
     .cl-panels {
         .cl-panel {
             display: none;
-            background: rgba($orange, .3);
-            border-radius: $b-radius-5;
-            padding: 4rem;
-
-            @include tablet-down {
-                padding: 1.5rem;
-                margin-top: 2rem;
-            }
 
             &:first-child {
                 display: block;
-            }
-
-            img {
-                @extend .mx-auto;
-                display: block;
-                margin-top: -7rem;
-                margin-bottom: 3rem;
-
-                @include tablet-down {
-                    margin-top: -4rem;
-                }
-            }
-
-            .institution-name {
-                color: $primary;
-
-                &:not(:last-child) {
-                    margin-bottom: 1.5rem;
-                }
-
-                .slim {
-                    font-weight: 500;
-                }
             }
         }
     }

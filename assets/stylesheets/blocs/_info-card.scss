@@ -27,7 +27,7 @@
         padding: 2rem;
     }
 
-    .institution-name, .institution-contacts, small {
+    .institution-name, .institution-contacts, .institution-transports, small {
         color: $primary;
     }
 
@@ -37,6 +37,35 @@
 
         &.email {
             word-break: break-all;
+        }
+    }
+}
+
+.institution-image-card {
+    height: 100%;
+    position: relative;
+
+    &:after {
+        content: '';
+        background-color: rgba($primary, .3);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    &:after, img {
+        border-radius: $b-radius-5-sm;
+
+        @include tablet {
+            border-radius: $b-radius-5;
         }
     }
 }

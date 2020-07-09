@@ -1,0 +1,8 @@
+.locations-wrapper {
+    .ilu-bg {
+        @include desktop-down {
+            left: 0;
+            right: initial;
+        }
+    }
+}
