@@ -130,7 +130,6 @@ Formation Cities Tabs - General
             position: sticky;
             top: 3rem;
             z-index: 4;
-            display: flex;
 
             @include desktop-down {
                 display: flex;
