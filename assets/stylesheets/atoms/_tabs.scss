@@ -125,7 +125,22 @@ Formation Cities Tabs - General
 
 .cl-toggle {
     .cl-tabs {
-        cursor: pointer;
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 3rem;
+            z-index: 4;
+            display: flex;
+
+            @include desktop-down {
+                display: flex;
+                overflow-y: auto;
+
+                .cl-tab {
+                    margin-right: 1rem;
+                }
+            }
+        }
 
         @include tablet-down {
             display: flex;
@@ -138,6 +153,7 @@ Formation Cities Tabs - General
     }
 
     .cl-tab {
+        cursor: pointer;
         margin-bottom: 1.5rem;
 
         &.active {
