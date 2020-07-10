@@ -1,0 +1,45 @@
+.cart-page-wrapper {
+    margin-top: calc(4rem + #{$navbar-height});
+    margin-bottom: 8rem;
+
+    .cart-header-container {
+        border-radius: $b-radius-5;
+        background-color: $light-secondary;
+        padding: 2rem 1.5rem;
+
+        @include tablet {
+            padding: 3rem 2rem;
+        }
+
+        .cart-header-title {
+            margin-bottom: 0;
+        }
+
+        .cart-header-illustration {
+            position: absolute;
+            bottom: -3px;
+            right: 2rem;
+
+            @include tablet-down {
+                display: none;
+            }
+        }
+    }
+
+    .actions-wrapper {
+        @include tablet-down {
+            position: fixed;
+            padding: 1rem;
+            background: $white;
+            box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        @include tablet {
+            position: relative;
+        }
+    }
+}
