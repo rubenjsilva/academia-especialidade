@@ -7,6 +7,10 @@
 
     .session-illustration {
         margin-left: 4rem;
+
+        @include desktop-down {
+            display: none;
+        }
     }
 }
 

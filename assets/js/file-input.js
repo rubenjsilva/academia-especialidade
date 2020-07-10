@@ -14,7 +14,7 @@ $fileInput.on('change', function() {
     $droparea.addClass('is-active');
   } else {
     // otherwise show number of files
-    $textContainer.text(filesCount + ' files selected');
+    $textContainer.text(filesCount + ' ficheiros seleccionados');
     $droparea.removeClass('is-active');
   }
 });

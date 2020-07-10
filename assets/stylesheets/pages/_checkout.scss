@@ -77,8 +77,12 @@ Successful Checkout
 .checkout-success-wrapper {
     background: linear-gradient(180deg, rgba(#FFE7CA, .3) 63.04%, rgba(255, 231, 202, 0.05) 101.56%);
     border-radius: $b-radius-5;
-    padding: 4rem;
+    padding: 2rem 1rem;
     text-align: center;
+
+    @include tablet {
+        padding: 4rem;
+    }
 
     .links-wrapper {
         margin-top: 4rem;
