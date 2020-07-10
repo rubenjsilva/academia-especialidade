@@ -25,3 +25,20 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+
+var isActive = false;
+
+$('.burger-menu').on('click', function() {
+  if (isActive) {
+    $(this).removeClass('active');
+    $('.header-navigation').removeClass('menu-open');
+    $('body').css({ overflow: 'auto'});
+  } else {
+    $(this).addClass('active');
+    $('.header-navigation').addClass('menu-open');
+    $('body').css({ overflow: 'hidden'});
+  }
+
+  isActive = !isActive;
+});
