@@ -48,19 +48,6 @@
         .listicles {
             .listicle-text {
                 margin-bottom: 2rem;
-                padding-left: 1rem;
-                position: relative;
-
-                &:before {
-                    content: '';
-                    background: #4F4F4F;
-                    border-radius: 2px;
-                    width: 6px;
-                    height: 6px;
-                    position: absolute;
-                    left: 0;
-                    top: .5rem;
-                }
             }
         }
 
@@ -78,6 +65,26 @@
             p {
                 margin-bottom: 0;
             }
+        }
+    }
+}
+
+
+
+.listicles {
+    .listicle-text {
+        padding-left: 1rem;
+        position: relative;
+
+        &:before {
+            content: '';
+            background: $gray-1;
+            border-radius: 2px;
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            left: 0;
+            top: .5rem;
         }
     }
 }
