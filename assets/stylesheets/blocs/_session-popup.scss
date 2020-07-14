@@ -1,0 +1,32 @@
+.header-menu {
+    position: relative;
+
+    .session-menu {
+        .session-pop-wrapper {
+            cursor: default;
+            border-radius: $b-radius-4;
+            background: $white;
+            box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
+            display: none;
+            width: 16rem;
+            position: absolute;
+            top: 100%;
+            left: -7rem;
+            padding: .5rem;
+            z-index: 1500;
+
+            @include tablet-down {
+                left: -9rem;
+            }
+
+            .session-header {
+                padding: .5rem 0;
+                color: $primary;
+            }
+        }
+
+        &:hover .session-pop-wrapper {
+            display: block;
+        }
+    }
+}
