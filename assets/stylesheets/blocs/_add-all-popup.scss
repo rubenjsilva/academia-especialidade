@@ -1,0 +1,81 @@
+.addall-popup {
+    cursor: default;
+    display: none;
+    border-radius: $b-radius-4;
+    background: $white;
+    box-shadow: 0px 20px 70px rgba(0, 0, 0, 0.08);
+    width: 20rem;
+    top: 2rem;
+    right: 4rem;
+    position: fixed;
+    padding: 1rem;
+    opacity: 1;
+    z-index: 99999;
+
+    @include tablet-down {
+        top: 1.5rem;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    &.popup-open {
+        z-index: 99999;
+        opacity: 1;
+        display: block;
+    }
+
+    .additional-info {
+        margin-bottom: 1rem;
+        padding-right: 1rem;
+        display: block;
+        line-height: 130%;
+    }
+
+    .module-status-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: .25rem;
+
+        .module-status-icon {
+            position: relative;
+            margin-right: .5rem;
+            background: rgba($gray-3, .2);
+            box-sizing: border-box;
+            border-radius: 100%;
+            width: 1rem;
+            height: 1rem;
+
+            &:after {
+                content: url('../../assets/images/tiny-cross.svg');
+                width: .5rem;
+                height: .5rem;
+                position: absolute;
+                top: -22%;
+                left: 32%;
+            }
+        }
+
+        .module-name {
+            color: $gray-2;
+        }
+
+        &.active {
+            .module-status-icon {
+                background: rgba($light-primary, .2);
+
+                &:after {
+                    content: url('../../assets/images/tiny-check.svg');
+                }
+            }
+
+            .module-name {
+                color: $primary;
+            }
+        }
+    }
+
+    .addall-header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
