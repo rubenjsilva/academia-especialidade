@@ -1,3 +1,18 @@
+
+.course-wrapper {
+    margin-top: 8rem;
+
+    @include tablet-down {
+        margin-top: 4rem;
+    }
+
+    .classes-main-content {
+        @include tablet-down {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
 .recommended-section {
     .recommended-header {
         display: flex;
