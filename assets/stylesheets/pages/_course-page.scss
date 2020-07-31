@@ -13,6 +13,74 @@
     }
 }
 
+.filters-wrapper {
+    display: flex;
+    width: 100%;
+    padding-left: .5rem;
+
+    .filters-container {
+        position: relative;
+        display: none;
+
+        &.filter-open {
+            padding: 1.5rem 1rem 0 1rem;
+            display: block;
+            visibility: visible;
+        }
+
+        @include tablet {
+            display: flex;
+        }
+
+        @include tablet-down {
+            background-color: $white;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 9;
+        }
+
+        .close-link-wrapper {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid $light-secondary;
+            border-top: 1px solid $light-secondary;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1.5rem;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        .custom-radio-wrapper {
+            display: flex;
+
+            .custom-radio-container {
+                @include tablet-down {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .custom-radio-container, .custom-select {
+        @include tablet-down {
+            margin-bottom: 1.5rem;
+        }
+
+        @include tablet {
+            margin-right: .5rem;
+        }
+
+        @include desktop {
+            margin-right: 1rem;
+        }
+    }
+}
+
 .recommended-section {
     .recommended-header {
         display: flex;
