@@ -1,0 +1,23 @@
+.mobile-filter-wrapper {
+    @include tablet-down {
+        display: block; 
+    }
+    
+    display: none;
+
+    .filter-btn {
+        width: 8rem;
+        min-height: 3rem;
+        color: $primary;
+        border: 1px solid $light-secondary;
+        font-family: $font-family-headliner;
+        box-sizing: border-box;
+        @extend .btn;
+        padding: 1rem;
+        margin-right: .5rem;
+
+        svg {
+            margin-left: .25rem;
+        }
+    }
+}

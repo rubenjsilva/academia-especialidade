@@ -1,10 +1,14 @@
 .toggle {
-    width: 14rem;
+    width: 13rem;
     min-height: 3rem;
     border: 1px solid $light-secondary;
     font-family: $font-family-headliner;
     box-sizing: border-box;
     @extend .btn;
+
+    @include desktop {
+        width: 14rem;
+    }
 
     .toggle-text-on, .toggle-text-pre {
         @include transition;
@@ -32,11 +36,15 @@
         cursor: pointer;
         position: absolute;
         top: 3px;
-        width: 92px;
+        width: 86px;
         bottom: 3px;
         left: 3px;
         background-color: $light-secondary;
         border-radius: $b-radius-3;
+
+        @include desktop {
+            width: 92px;
+        }
     }
 
     &.toggle-on {
@@ -49,9 +57,13 @@
         }
 
         .toggle-button {
-            width: 8rem;
+            width: 7rem;
             right: 3px;
             left: 92px;
+
+            @include desktop {
+                width: 8rem;
+            }
         }
     }
 }
