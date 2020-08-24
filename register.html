@@ -25,7 +25,6 @@
     <meta property="article:publisher" content="https://www.facebook.com/especialidade"/>
     <meta property="article:author" content="https://www.facebook.com/especialidade"/>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/application.css">
     </head>
 
@@ -124,9 +123,16 @@
                         <label for="phone">Número de telemóvel</label>
                     </div>
                     
-                    <div class="field-group textfield">      
-                        <input type="text" id="institution" name="institution" required>
-                        <label for="institution">Insituição de ensino</label>
+                    <div class="field-group"> 
+                      <select class="normal-select">
+                        <option value="" disabled selected>Instituição de ensino</option>
+                        <option>Porto - FMUP</option>
+                        <option>Coimbra - FMUC</option>
+                        <option>Braga - UM</option>
+                        <option>Covilhã - UBI</option>
+                        <option>Lisboa - FCM</option>
+                        <option>Algarve - UA</option>
+                      </select>
                     </div>
 
                     <div class="field-group textfield">      
@@ -142,6 +148,15 @@
                     <div class="field-group textfield">      
                         <input type="password" id="password" name="password" required>
                         <label for="password">Confirmar password</label>
+                    </div>
+
+                    <div class="listicles">
+                      <small class="listicle-text">
+                        Mínimo 8 caracteres.
+                      </small>
+                      <small class="listicle-text">
+                        Deve incluir pelo menos 1 maiúscula, 1 minúscula e 1 número.
+                      </small>
                     </div>
 
                 <div class="button-wrapper mt-48">
@@ -214,11 +229,5 @@
         </div>
       </footer>
     </main>
-
-    <script src="assets/js/autcomplete.js"></script>
-    <script>
-      autocomplete(document.getElementById("institution"), insitutions);
-    </script>
-
   </body>
 </html>
