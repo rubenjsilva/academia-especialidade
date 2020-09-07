@@ -92,9 +92,15 @@
             <div class="row">
               <div class="col">
                 <div class="tab-indicator">
-                  <h6 class="tab-page active">1. Informação</h6>
-                  <h6 class="tab-page">2. Pagamento</h6>
-                  <h6 class="tab-page">3. Confirmação</h6>
+                  <a class="inline-link" href="#">
+                    <h6 class="tab-page active">1. Informação</h6>
+                  </a>
+                  <a class="inline-link" href="#">
+                    <h6 class="tab-page">2. Pagamento</h6>
+                  </a>
+                  <a class="inline-link" href="#">
+                    <h6 class="tab-page">3. Confirmação</h6>
+                  </a>
                 </div>
               </div>
             </div>
@@ -103,6 +109,16 @@
               <div class="col-12 col-md-7">
                 <h4 class="checkout-headline">Dados de faturação</h4>
                 <form class="form personal-details-form">
+                  <div class="row mb-8">
+                    <div class="col-12">
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="checkbox">
+                        <small class="checkbox-label">Preencher com dados já existentes na conta</small>
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
                   <div class="row">
                     <div class="col-12 col-md-6 field-group textfield">      
                         <input type="text" id="name" name="name" autocomplete="on" required>
@@ -147,6 +163,15 @@
                     <div class="col-12 col-md-4 field-group textfield">      
                         <input type="text" id="country" name="country" autocomplete="on" required>
                         <label for="country">País</label>
+                    </div>
+                  </div>
+                  <div class="row mt-16">
+                    <div class="col-12 col-md-8 col-lg-6">
+                      <label class="checkbox-container">
+                        <input type="checkbox" name="checkbox">
+                        <small class="checkbox-label">Guardar dados pessoais</small>
+                        <span class="checkmark"></span>
+                      </label>
                     </div>
                   </div>
                 </form>
